@@ -1,34 +1,30 @@
 # Great Courses
 
-This is a list of high-quality courses that, for one reason or another, didn't make it into the curriculum.
-The most common reasons are that the course isn't available often enough,
-or that there was an alternative that fit better into the curriculum.
+A curated directory of standout, full-length university courses, OpenCourseWare repositories, and specialized video lecture series in Logic. These resources provide deep conceptual models, rigorous metatheoretical proofs, and advanced disciplinary perspectives beyond introductory survey curricula.
 
-## Introductory Logic
+## Mathematical Logic, Metatheory & Set Theory
 
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Introduction to Logic (Stanford University, Coursera)](https://www.coursera.org/learn/logic-introduction) | 10 weeks | 5-10 hours/week
-[Language, Proof and Logic (Stanford Online)](https://online.stanford.edu/courses/sohs-xlpl-sp-language-proof-and-logic) | Self-paced | -
-[Introduction to Mathematical Thinking (Stanford University, Coursera)](https://www.coursera.org/learn/mathematical-thinking) | 10 weeks | 5-10 hours/week
+- [Logic II: Metatheory and Gödel's Incompleteness Theorems (MIT OpenCourseWare / Prof. Vann McGee)](https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/)
+- [Mathematical Logic: Propositional, First-Order Logic & Incompleteness (NPTEL / IIT Madras / Prof. Arindama Singh)](https://nptel.ac.in/courses/111106084)
+- Model Theory Graduate Lecture Series (UCLA / Prof. Artem Chernikov)
+- Introduction to Set Theory and Axiomatic Foundations (University of Oxford Podcasts / Prof. Robin Knight)
 
-## Mathematical Logic
+## Modal, Philosophical & Non-Classical Logics
 
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Mathematical Logic (UCLA Lecture Series by Artem Chernikov, YouTube)](https://www.youtube.com/playlist?list=PLKX265b1Q0Rix8hTSX8L9gJ5hM4h4oW7v) | - | -
-[Mathematical Logic (NPTEL/IIT Madras by Arindama Singh, YouTube)](https://www.youtube.com/playlist?list=PL2EB5662A0D455A81) | 40 lectures | -
+- [Modal Logic: Syntax, Semantics & Metalogic (MIT OpenCourseWare / Prof. Wesley H. Holliday)](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/)
+- [Critical Reasoning for Beginners (University of Oxford Podcasts / Marianne Talbot)](https://podcasts.ox.ac.uk/series/critical-reasoning-beginners)
+- Modal Logic and Non-Classical Systems Video Lectures (University of Calgary / Open Logic Project / Prof. Richard Zach)
+- Philosophical Logic and Theories of Truth (University of Oxford Webcasts / Prof. Volker Halbach)
 
-## Philosophical Logic
+## Computational Logic, Type Theory & Formal Verification
 
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Logic: The Language of Truth (University of York, FutureLearn)](https://www.futurelearn.com/courses/logic-the-philosophical-science-of-truth) | 4 weeks | 3 hours/week
+- [Theory of Computation: Automata, Computability & Complexity (MIT OpenCourseWare / Prof. Michael Sipser)](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)
+- [Constructive Logic: Natural Deduction, Sequent Calculus & Type Theory (Carnegie Mellon University / Prof. Frank Pfenning)](https://www.cs.cmu.edu/~fp/courses/15317-f17/)
+- [Software Foundations: Mechanized Proofs and Formal Verification in Coq (University of Pennsylvania / Prof. Benjamin C. Pierce et al.)](https://softwarefoundations.cis.upenn.edu/)
+- Automated Reasoning and Decision Procedures (Stanford University / Prof. Michael Genesereth)
 
-## Online Learning - Great Courses
+## Foundations of Mathematics & Categorical Logic
 
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) | 4 weeks | 2 hours/week
-[Mindshift](https://www.coursera.org/learn/mindshift) | 4 weeks | 2 hours/week
-[Powersearching with Google](https://www.edx.org/learn/google-power-searching/google-power-searching-with-google) | 3 weeks | 4-6 hours/week
+- Category Theory and Categorical Logic (Carnegie Mellon University / Prof. Steve Awodey)
+- Homotopy Type Theory and Univalent Foundations Masterclass Series (Institute for Advanced Study)
+- Proof Theory and Reverse Mathematics Lecture Series (Association for Symbolic Logic / International Congress of Mathematicians)

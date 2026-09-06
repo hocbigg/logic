@@ -1,89 +1,39 @@
 # Projects
 
-This page is a curated collection of well-written, step-by-step guides for learning Logic through hands-on, project-based practice.
+A curated collection of step-by-step guides, interactive workspaces, and methodological templates for learning Logic through hands-on practice.
 
-> *What I cannot create, I do not understand — Richard Feynman.*
+> *What I cannot create, I do not understand. — Richard Feynman*
 
-These projects are meant to support learning throughout the curriculum, not only at the end.  
-By building, writing, creating, or reconstructing real artifacts in the field, learners develop practical understanding alongside theoretical study.
+Rather than treating logic as an abstract spectator sport, these projects invite you to construct real intellectual artifacts—ranging from dialectical argument maps and natural deduction derivations to semantic countermodels and formal reconstructions of classic philosophical debates.
 
-## Tutorials
+## Argument Mapping & Critical Dialectics
 
-* [Propositional Calculus](#build-your-own-propositional-calculus)
-* [First-Order Logic](#build-your-own-first-order-logic)
-* [Modal Logic](#build-your-own-modal-logic)
-* [Proof System](#construct-your-own-proof-system)
-* [Natural Deduction System](#construct-your-own-natural-deduction-system)
-* [Sequent Calculus](#construct-your-own-sequent-calculus)
-* [Tableau System](#construct-your-own-tableau-system)
-* [Hilbert-style Axiomatic System](#construct-your-own-hilbert-style-system)
-* [Automated Theorem Prover](#build-your-own-automated-theorem-prover)
-* [Proof Assistant Kernel](#build-your-own-proof-assistant-kernel)
-* [Logical Semantics](#define-your-own-logical-semantics)
-* [Model Checker](#build-your-own-model-checker)
-* [Logical Inference Engine](#build-your-own-logical-inference-engine)
-* [Argument](#construct-your-own-philosophical-argument)
-* [Formal Proof](#write-your-own-formal-proof)
+- [Diagramming Arguments: Premise and Conclusion Indicators](https://philosophy.lander.edu/logic/diagram.html)
+- [The Structure of Arguments and Enthymeme Reconstruction](https://philosophy.lander.edu/logic/structure.html)
+- [Argument Mapping and Debate Visualization Tutorial with Argdown](https://argdown.org/)
+- [Taxonomy of Logical Fallacies and Real-World Argument Auditing](https://www.fallacyfiles.org/taxonomy.html)
 
-### Propositional Calculus
+## Formal Proof Construction & Natural Deduction
 
-* [Implementing Propositional Logic in Lean (syntax, semantics, basic procedures)](https://avigad.github.io/lamr/implementing_prop_logic.html) (*Online book chapter / code tutorial*)
+- [Interactive Natural Deduction Proof Construction with Carnap](https://carnap.io/)
+- [forall x: Calgary Formal Proof System and Derivation Suite](https://forallx.openlogicproject.org/)
+- [Natural Deduction Proof Construction and Verification Guide](https://proofs.openlogicproject.org/)
 
-### First-Order Logic
+## Semantic Evaluation, Truth Tables & Semantic Tableaux
 
-* [Implementing First-Order Logic in Lean (syntax, semantics, unification)](https://avigad.github.io/lamr/implementing_first_order_logic.html) (*Online book chapter / code tutorial*)
-* [Build Your Own First-Order Prover tutorial series (CADE hands-on parts)](https://jens-otten.de/tutorial_cade19/) (*Slide-based tutorial / implementation guide*)
+- [Tree Proof Generator and Semantic Tableaux Walkthrough](https://www.umsu.de/trees/)
+- [Notes and Practical Guide to Truth, Validity, and Soundness](https://philosophy.lander.edu/logic/tvs.html)
+- [First-Order Interpretations and Countermodel Construction Guide](https://slc.openlogicproject.org/)
 
-### Modal Logic
+## Philosophical Argument Reconstruction & Formalization
 
-* [How to Build Models for Modal Logic (Kripke structures walkthrough)](https://www.youtube.com/watch?v=zvIlicepUBE) (*Video tutorial / model construction*)
+- [Formalizing Natural Language Arguments in Predicate Logic](https://forallx.openlogicproject.org/)
+- [Reconstructing and Formalizing Ontological Arguments in Modal Logic](https://plato.stanford.edu/entries/ontological-arguments/)
+- [Formal Analysis of the Gettier Problem in Epistemic Logic](https://plato.stanford.edu/entries/knowledge-analysis/)
+- [Formalizing Moral Reasoning and Deontic Paradoxes](https://plato.stanford.edu/entries/logic-deontic/)
 
-### Proof System
+## Modal & Non-Classical Model Construction
 
-* [How to Build an Automated Theorem Prover (TABLEAUX tutorial series, covering calculi)](https://jens-otten.de/tutorial_tableaux19/) (*Slide-based tutorial / implementation guide*)
-
-### Natural Deduction System
-
-* [How to do Natural Deduction Proofs (step-by-step rule application)](https://www.youtube.com/watch?v=mNkWi8uIIhk) (*Video tutorial / proof construction*)
-
-### Sequent Calculus
-
-* [A Tutorial on Computational Classical Logic and the Sequent Calculus (introduction to rules and structure)](https://pauldownen.com/publications/sequent-intro.pdf) (*PDF tutorial / conceptual build*)
-
-### Tableau System
-
-* [How to Build an Automated Theorem Prover (includes tableau parts in sequent/tableau tutorial)](https://jens-otten.de/tutorial_tableaux19/) (*Slide-based tutorial / implementation guide*)
-
-### Hilbert-style Axiomatic System
-
-(No strong from-scratch procedural guides found; axiomatic systems are often presented descriptively.)
-
-### Automated Theorem Prover
-
-* [How (and why) to Build an Automated Theorem Prover (Java implementation walkthrough)](https://www.youtube.com/watch?v=J3Pm43O48Uo) (*Video series / implementation*)
-* [Build Your Own First-Order Prover (Prolog-based, hands-on)](https://jens-otten.de/tutorial_cade19/) (*Slide-based tutorial / code-focused*)
-
-### Proof Assistant Kernel
-
-* [Implementing First-Order Logic in Lean (kernel-like syntax/semantics base, extendable)](https://avigad.github.io/lamr/implementing_first_order_logic.html) (*Online book chapter / code tutorial*)
-
-### Logical Semantics
-
-* [Implementing First-Order Logic in Lean (model semantics and evaluation)](https://avigad.github.io/lamr/implementing_first_order_logic.html) (*Online book chapter / code tutorial*)
-
-### Model Checker
-
-* [Build your own model checker in one month (tutorial overview, techniques survey)](https://www.researchgate.net/publication/261320291_Build_your_own_model_checker_in_one_month) (*Tutorial paper / construction guide*)
-
-### Logical Inference Engine
-
-* [How to Build an Automated Theorem Prover (inference-focused implementation)](https://www.youtube.com/watch?v=J3Pm43O48Uo) (*Video series / implementation*)
-
-### Argument
-
-* [Diagramming Arguments (premise/conclusion structure, construction guide)](https://philosophy.lander.edu/logic/diagram.html) (*Online guide / argument building*)
-
-### Formal Proof
-
-* [Natural Deduction Proofs: practise examples (step-by-step proof writing)](https://www.youtube.com/watch?v=UY42egqAWo8) (*Video tutorial / proof construction*)
-* [How to do Natural Deduction Proofs (rule-based formal proof building)](https://www.youtube.com/watch?v=mNkWi8uIIhk) (*Video tutorial / proof construction*)
+- [Modal Logic Tree Proofs and Possible-World Countermodels](https://www.umsu.de/trees/)
+- [Constructing Kripke Frames in Modal Logic: Boxes and Diamonds](https://bd.openlogicproject.org/)
+- [Semantics and Countermodels for Intuitionistic Logic](https://slc.openlogicproject.org/)

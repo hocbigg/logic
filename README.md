@@ -50,7 +50,7 @@ they belong in [extras/courses](extras/courses.md), [extras/readings](extras/rea
 
 - [Orientation & Mathematical Literacy](#orientation--mathematical-literacy)
 - [Informal Logic & Argumentation](#informal-logic--argumentation)
-- [Formal Logic Core Undergraduate Level](#formal-logic-core-undergraduate-level)
+- [Formal Logic Core (Undergraduate Level)](#formal-logic-core-undergraduate-level)
     - [A. Propositional Logic](#a-propositional-logic)
     - [B. First-Order Predicate Logic](#b-first-order-predicate-logic)
     - [C. Proof Systems](#c-proof-systems)
@@ -58,25 +58,25 @@ they belong in [extras/courses](extras/courses.md), [extras/readings](extras/rea
 
 Study them in this exact order:
 
-1. I. Orientation & Mathematical Literacy  
-2. II. Informal Logic & Argumentation  
-3. III. Formal Logic Core (Undergraduate Level) – complete all three subsections (A, B, and C)  
-4. IV. Metatheory of Logic  
+1. I. Orientation & Mathematical Literacy
+2. II. Informal Logic & Argumentation
+3. III. Formal Logic Core (Undergraduate Level) – complete all three subsections (A, B, and C)
+4. IV. Metatheory of Logic
 
 ## Orientation & Mathematical Literacy
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Mathematical Thinking & Proofs | [How to Prove It](https://archive.org/details/howtoproveitstru0000vell) (Velleman, Archive.org) | [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (MIT OCW) |
-| Set Theory (Naïve) | [Naive Set Theory](https://archive.org/details/naivesettheory0000halm) (Halmos, Archive.org) | [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (MIT OCW, via MCS) |
-| What Is Logic? (Philosophical Orientation) | [Stanford Encyclopedia of Philosophy: Logic](https://plato.stanford.edu/entries/logic-classical/), [Philosophy of Logic](https://plato.stanford.edu/entries/logic-philosophy/) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Online) |
+| Mathematical Thinking & Proofs | [How to Prove It: A Structured Approach](https://archive.org/details/howtoproveitstru0000vell) (Velleman, Archive.org) | [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (MIT OCW 6.042J) |
+| Set Theory (Naïve) | [Naive Set Theory](https://archive.org/details/naivesettheory0000halm) (Halmos, Archive.org) / *How to Prove It* (Chapters 4–5, Velleman) | [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (MIT OCW 6.042J, Unit 1) |
+| What Is Logic? (Philosophical Orientation) | *Logic: A Very Short Introduction* (Priest, Oxford University Press) / [Stanford Encyclopedia of Philosophy: Classical Logic](https://plato.stanford.edu/entries/logic-classical/), [Informal Logic](https://plato.stanford.edu/entries/logic-informal/) | *Critical Reasoning for Beginners* (Talbot, University of Oxford Podcasts) |
 
 ## Informal Logic & Argumentation
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Informal Logic | [Open Logic Project – Informal Logic](https://openlogicproject.org/) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW Logic I) |
-| Argument Analysis & Fallacies | [Open Logic Project – Critical Reasoning](https://openlogicproject.org/) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Introduction to Logic) |
+| Informal Logic | *Understanding Arguments: An Introduction to Informal Logic* (Sinnott-Armstrong & Fogelin) / *A Concise Introduction to Logic* (Hurley & Watson) | [Think Again I: How to Understand Arguments](https://www.coursera.org/learn/understanding-arguments) (Duke University, Coursera) |
+| Argument Analysis & Fallacies | *Understanding Arguments* (Chapters 13–16, Sinnott-Armstrong & Fogelin) / [Stanford Encyclopedia of Philosophy: Fallacies](https://plato.stanford.edu/entries/fallacies/) | *Think Again IV: How to Avoid Fallacies* (Duke University, Coursera) |
 
 ## Formal Logic Core (Undergraduate Level)
 
@@ -84,29 +84,29 @@ Study them in this exact order:
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Syntax & Semantics | [forall x: Calgary Remix](https://forallx.openlogicproject.org/) (Open Logic Project) / [Open Logic Project – Propositional Logic](https://openlogicproject.org/) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Introduction to Logic) |
-| Truth, Validity, Entailment | [forall x: Calgary Remix](https://forallx.openlogicproject.org/) / [Open Logic Project](https://openlogicproject.org/) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW Logic I) |
+| Syntax & Semantics | [forall x: Calgary](https://forallx.openlogicproject.org/) (Magnus, Button, Thomas-Bolduc, & Zach) / *An Introduction to Formal Logic* (Smith, Cambridge University Press) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Online, Coursera) |
+| Truth, Validity, Entailment | [forall x: Calgary](https://forallx.openlogicproject.org/) (Parts I–III) / *Logic: The Laws of Truth* (Smith, Princeton University Press) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW 24.241, Sentential Logic) |
 
 ### B. First-Order Predicate Logic
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Quantifiers & Structures | [forall x: Calgary Remix](https://forallx.openlogicproject.org/) / [Open Logic Project – First-Order Logic](https://openlogicproject.org/) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Introduction to Logic) |
-| Models & Interpretation | [forall x: Calgary Remix](https://forallx.openlogicproject.org/) / [Open Logic Project](https://openlogicproject.org/) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW Logic I) |
+| Quantifiers & Structures | [forall x: Calgary](https://forallx.openlogicproject.org/) (Parts IV–V) / *Language, Proof and Logic* (Barwise & Etchemendy, CSLI Publications) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Online, Relational Logic) |
+| Models & Interpretation | [forall x: Calgary](https://forallx.openlogicproject.org/) (Part VI) / [Sets, Logic, Computation](https://slc.openlogicproject.org/) (Chapter 5, Zach et al., Open Logic Project) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW 24.241, Predicate Logic) |
 
 ### C. Proof Systems
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Natural Deduction | [forall x: Calgary Remix](https://forallx.openlogicproject.org/) (Open Logic Project) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW Logic I) |
-| Sequent Calculus (Intro – optional) | [Open Logic Project](https://openlogicproject.org/) | — |
+| Natural Deduction | [forall x: Calgary](https://forallx.openlogicproject.org/) (Parts IV & VII: Fitch-Style Derivations) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW 24.241, Formal Derivations) |
+| Sequent Calculus & Proof Theory (Introductory) | [Sets, Logic, Computation](https://slc.openlogicproject.org/) (Chapters 8–10: Proof Systems, Zach et al., Open Logic Project) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW 24.241, Proof Systems & Soundness) |
 
 ## Metatheory of Logic
 
 | Subject | Book | Online Course |
 | --- | --- | --- |
-| Soundness & Completeness | [Open Logic Project – Metatheory](https://openlogicproject.org/) | [Introduction to Logic](https://www.coursera.org/learn/logic-introduction) (Stanford Introduction to Logic) |
-| Computability (Intro) & Gödel’s Theorems (overview) | [Computability and Logic](https://archive.org/details/computabilitylog0000bool) (Boolos et al., Archive.org) / [Gödel’s Proof](https://archive.org/details/gdelsproof00nage) (Nagel & Newman, Archive.org) | [Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/) (MIT OCW) |
+| Soundness & Completeness | [Sets, Logic, Computation](https://slc.openlogicproject.org/) (Zach et al., Open Logic Project) / *A Mathematical Introduction to Logic* (Enderton, Academic Press) | [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW 24.241, Metatheory Units) |
+| Computability & Gödel’s Incompleteness Theorems | [Computability and Logic](https://archive.org/details/computabilitylog0000bool) (Boolos, Burgess, & Jeffrey, Archive.org) / [Gödel’s Proof](https://archive.org/details/gdelsproof00nage) (Nagel & Newman, Archive.org) / *An Introduction to Gödel's Incompleteness Theorems* (Smith, Cambridge University Press) | [Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/) (MIT OCW 18.404J) / [Logic II](https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/) (MIT OCW 24.242) |
 
 ## Congratulations
 
@@ -117,6 +117,3 @@ Congratulations!
 # Code of conduct
 
 [Hocbigg's code of conduct](https://github.com/hocbigg/code-of-conduct).
-
-
-

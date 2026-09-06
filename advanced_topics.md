@@ -1,55 +1,44 @@
 # Advanced Topics
 
-- [Philosophical Logic](#philosophical-logic)
-- [Logic for Computer Science & AI](#logic-for-computer-science--ai)
-- [Mathematical Logic Advanced](#mathematical-logic-advanced)
-- [Limits and Extensions of Classical Logic](#limits-and-extensions-of-classical-logic)
+- [Mathematical Logic & Foundational Systems](#mathematical-logic--foundational-systems): Explores the formal core of modern pure logic through model theory, large cardinal set theory, proof complexity, and recursion theory.
+- [Philosophical Logic & Non-Classical Logics](#philosophical-logic--non-classical-logics): Investigates non-classical deduction systems, modal semantics, constructivism, and multi-agent epistemic formalisms.
+- [Computational Logic, Verification & Automated Reasoning](#computational-logic-verification--automated-reasoning): Focuses on automated theorem proving, SAT/SMT solving, temporal model checking, and interactive formal verification.
+- [Categorical Logic, Type Theory & Formal Foundations](#categorical-logic-type-theory--formal-foundations): Bridges structural mathematics, lambda calculi, topos theory, and univalent foundations via the Curry-Howard-Lambek correspondence.
 
-You should only begin these **after completing the entire Core sequence** (sections I–V). Each track goes deeper in one direction (*Choose according to your goals*):
+You should begin these tracks only **after mastering the Core Undergraduate Curriculum** in formal logic, proof systems, and introductory metatheory. Choose the track that aligns with your research goals or specialized applications.
 
-- **Philosophical Logic**  
-  Focuses on the connections between logic, philosophy, language, knowledge, and norms.
+## Mathematical Logic & Foundational Systems
 
-- **Logic for Computer Science & AI**  
-  Focuses on the practical and theoretical tools used in programming, computation, verification, and artificial intelligence.
-
-- **Mathematical Logic (Advanced)**  
-  Focuses on the most abstract and foundational parts of modern logic as a branch of mathematics.
-
-- **Limits and Extensions of Classical Logic**
-  Modal logic, non-classical logics survey, and detailed Gödel incompleteness
-
-## Philosophical Logic
-
-| Subject | Book | Online Course |
+| Topic | Why Study | Resources |
 | --- | --- | --- |
-| Philosophical Logic | **[Philosophical Logic](https://archive.org/details/philosophicallog0000burg)** (Burgess, Archive.org) | — |
-| Logic & Language | *Logic, Language, and Meaning* (Gamut) | — |
-| Epistemic Logic | *Reasoning About Knowledge* (Fagin et al.) | — |
-| Deontic Logic | *Handbook of Deontic Logic* (Open PDF) | — |
+| Model Theory | Investigates the relationship between formal languages and their mathematical interpretations, classifying mathematical structures via definable sets, quantifier elimination, and stability theory. It provides fundamental tools for contemporary algebraic geometry and o-minimality. | - David Marker, *Model Theory: An Introduction* (Springer Graduate Texts in Mathematics)<br>- Wilfrid Hodges, *A Shorter Model Theory* (Cambridge University Press)<br>- [Stanford Encyclopedia of Philosophy: Model Theory](https://plato.stanford.edu/entries/model-theory/) |
+| Axiomatic & Descriptive Set Theory | Studies the universe of sets beyond Zermelo-Fraenkel set theory with Choice (ZFC), employing forcing techniques, constructibility, and large cardinals to establish relative consistency and independence results. It illuminates the mathematical limits of undecidable propositions like the Continuum Hypothesis. | - Thomas Jech, *Set Theory: The Third Millennium Edition* (Springer)<br>- Kenneth Kunen, *Set Theory: An Introduction to Independence Proofs* (North-Holland)<br>- Akihiro Kanamori, *The Higher Infinite: Large Cardinals in Set Theory from Their Beginnings* (Springer) |
+| Proof Theory & Reverse Mathematics | Analyzes the syntactic structure of mathematical proofs and calibrates the exact axiomatic strength required to prove core theorems across analysis, algebra, and combinatorics using subsystems of second-order arithmetic. It provides the definitive framework for Hilbert's program and ordinal analysis. | - Stephen G. Simpson, *Subsystems of Second Order Arithmetic* (Cambridge University Press / ASL)<br>- Samuel R. Buss (Ed.), *Handbook of Proof Theory* (Elsevier)<br>- [Stanford Encyclopedia of Philosophy: Proof Theory](https://plato.stanford.edu/entries/proof-theory/) |
+| Computability & Degree Theory | Formalizes the intrinsic boundaries of algorithmic computation, classifying undecidable problems and non-computable sets into structural hierarchies via Turing degrees, priority arguments, and arithmetic complexity. It is essential for understanding the limits of formal systems and generalized recursion. | - Robert I. Soare, *Turing Computability: Theory and Applications* (Springer)<br>- S. Barry Cooper, *Computability Theory* (Chapman & Hall/CRC)<br>- [MIT OCW: Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/) (18.404J, Sipser) |
 
-## Logic for Computer Science & AI
+## Philosophical Logic & Non-Classical Logics
 
-| Subject | Book | Online Course |
+| Topic | Why Study | Resources |
 | --- | --- | --- |
-| Automata & Formal Languages | *Introduction to Automata Theory* (Hopcroft et al.) | **[Automata](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)** (MIT OCW Automata, related) |
-| Logic Programming | *Foundations of Logic Programming* (Lloyd) | — |
-| Temporal Logic | *Temporal Logic* (Emerson) | — |
-| Automated Theorem Proving | *Handbook of Automated Reasoning* (Vol. I, open sections) | — |
+| Modal Logic & Kripke Semantics | Extends classical propositional and predicate logic with operators for necessity, possibility, time, and agency using relational possible-world semantics and frame correspondence theory. It is the central formal framework for analytic metaphysics, formal epistemology, and intensional semantics. | - Patrick Blackburn, Maarten de Rijke, and Yde Venema, *Modal Logic* (Cambridge University Press)<br>- [Boxes and Diamonds: Formal Properties of Modal Logic](https://bd.openlogicproject.org/) (Open Logic Project)<br>- [MIT OCW: Modal Logic](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/) (24.244, Holliday) |
+| Intuitionistic & Constructive Logic | Replaces classical truth conditions with proof-conditions and constructive warrant, rejecting the Principle of Excluded Middle and non-constructive existence proofs. It provides the logical foundation for constructive mathematics, algorithmic proof extraction, and type-theoretic computer science. | - A.S. Troelstra and D. van Dalen, *Constructivism in Mathematics: An Introduction* (Vol. 1, North-Holland)<br>- Michael Dummett, *Elements of Intuitionism* (Oxford University Press)<br>- [Stanford Encyclopedia of Philosophy: Intuitionistic Logic](https://plato.stanford.edu/entries/logic-intuitionistic/) |
+| Many-Valued & Substructural Logics | Examines formal deductive systems that reject classical bivalence or drop standard structural rules like weakening, contraction, and exchange to model resource sensitivity, paradoxes, and vagueness. It is vital for understanding linear logic, relevance logic, and paraconsistent reasoning. | - Graham Priest, *An Introduction to Non-Classical Logic: From If to Is* (Cambridge University Press)<br>- Greg Restall, *An Introduction to Substructural Logics: An Introduction to Sequent Calculi* (Routledge)<br>- [Stanford Encyclopedia of Philosophy: Many-Valued Logic](https://plato.stanford.edu/entries/logic-manyvalued/) |
+| Epistemic, Deontic & Multi-Agent Logic | Formalizes reasoning about knowledge, belief, obligation, permission, and information update among multiple interacting rational agents. It underpins contemporary research in formal epistemology, distributed protocols, game theory, and normative artificial intelligence. | - Ronald Fagin, Joseph Y. Halpern, Yoram Moses, and Moshe Y. Vardi, *Reasoning About Knowledge* (MIT Press)<br>- Dov Gabbay, John Horty, Xavier Parent, Ron van der Meyden, and Leendert van der Torre (Eds.), *Handbook of Deontic Logic and Normative Systems* (College Publications)<br>- [Stanford Encyclopedia of Philosophy: Epistemic Logic](https://plato.stanford.edu/entries/logic-epistemic/) |
 
-## Mathematical Logic (Advanced)
+## Computational Logic, Verification & Automated Reasoning
 
-| Subject | Book | Online Course |
+| Topic | Why Study | Resources |
 | --- | --- | --- |
-| Model Theory | Marker – *Model Theory* (Free PDF) | — |
-| Axiomatic Set Theory | Jech – *Set Theory* | — |
-| Large Cardinals | Kanamori – *The Higher Infinite* | — |
-| Reverse Mathematics | Simpson – *Subsystems of Second-Order Arithmetic* | — |
+| Automated Reasoning & Decision Procedures (SAT/SMT) | Studies the algorithmic engines and decision procedures that determine the satisfiability and validity of large-scale propositional and first-order formulas with background theories. It serves as the foundational core for modern compiler optimization, hardware verification, and symbolic AI. | - Daniel Kroening and Ofer Strichman, *Decision Procedures: An Algorithmic Point of View* (Springer)<br>- Alan Robinson and Andrei Voronkov (Eds.), *Handbook of Automated Reasoning* (Volumes I & II, Elsevier / MIT Press)<br>- Armin Biere, Marijn Heule, Hans van Maaren, and Toby Walsh (Eds.), *Handbook of Satisfiability* (IOS Press) |
+| Temporal Logic & Model Checking | Provides algorithmic techniques to formally verify whether reactive, concurrent, or distributed systems satisfy temporal safety and liveness specifications expressed in linear-time temporal logic (LTL) or computation tree logic (CTL). It is indispensable for safety-critical hardware and software assurance. | - Christel Baier and Joost-Pieter Katoen, *Principles of Model Checking* (MIT Press)<br>- Edmund M. Clarke, Orna Grumberg, Daniel Kroening, Doron Peled, and Helmut Veith, *Model Checking* (2nd Edition, MIT Press)<br>- [Stanford Encyclopedia of Philosophy: Temporal Logic](https://plato.stanford.edu/entries/logic-temporal/) |
+| Interactive Theorem Proving & Proof Assistants | Explores computer-checked formal mathematics and software verification where human mathematicians guide proof assistants in discharging complex deductive obligations. It represents the state of the art in verified software engineering and formalized mathematics. | - [Software Foundations Series](https://softwarefoundations.cis.upenn.edu/) (Benjamin C. Pierce et al., University of Pennsylvania)<br>- Yves Bertot and Pierre Castéran, *Interactive Theorem Proving and Program Development: Coq'Art: The Calculus of Inductive Constructions* (Springer)<br>- Jeremy Avigad, Leonardo de Moura, Soonho Kong, *Theorem Proving in Lean* (Lean Community Online Documentation) |
+| Logic Programming & Declarative Problem Solving | Investigates declarative programming formalisms based on Horn clause resolution, negation-as-failure, and Answer Set Programming (ASP) for non-monotonic knowledge representation. It is crucial for declarative problem-solving, combinatorial optimization, and deductive databases. | - John W. Lloyd, *Foundations of Logic Programming* (Springer)<br>- Martin Gebser, Roland Kaminski, Benjamin Kaufmann, and Torsten Schaub, *Answer Set Solving in Practice* (Morgan & Claypool)<br>- Krzysztof R. Apt, *From Logic Programming to Prolog* (Prentice Hall) |
 
-## Limits and Extensions of Classical Logic
+## Categorical Logic, Type Theory & Formal Foundations
 
-| Subject | Book | Online Course |
+| Topic | Why Study | Resources |
 | --- | --- | --- |
-| Gödel’s Incompleteness Theorems | [Gödel’s Proof](https://archive.org/details/gdelsproof00nage) (Nagel & Newman, Archive.org) | [Theory of Computation](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/) (MIT OCW) |
-| Modal Logic | [An Introduction to Non-Classical Logic](https://archive.org/details/introductiontono0000prie) (Priest) | [Modal Logic](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/) (MIT OCW) |
-| Non-Classical Logics (Survey) | [Priest](https://archive.org/details/introductiontono0000prie) | [Modal Logic](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/) (MIT OCW Modal Logic) |
+| Category Theory for Logicians | Formulates mathematical concepts in terms of universal properties, functors, natural transformations, and adjoints, providing the structural language for categorical logic and modern algebra. It is essential for understanding functorial semantics and duality theorems. | - Steve Awodey, *Category Theory* (Oxford Logic Guides, Oxford University Press)<br>- Saunders Mac Lane, *Categories for the Working Mathematician* (Springer Graduate Texts in Mathematics)<br>- [Stanford Encyclopedia of Philosophy: Category Theory](https://plato.stanford.edu/entries/category-theory/) |
+| Type Theory & Lambda Calculi | Formalizes constructive logic, computation, and programming language semantics through syntax-directed type systems, establishing the Curry-Howard correspondence between propositions as types and proofs as programs. It forms the foundation of modern functional programming and proof assistant engines. | - Benjamin C. Pierce, *Types and Programming Languages* (MIT Press)<br>- Morten Heine Sørensen and Paweł Urzyczyn, *Lectures on the Curry-Howard Isomorphism* (Elsevier)<br>- [Stanford Encyclopedia of Philosophy: Type Theory](https://plato.stanford.edu/entries/type-theory/) |
+| Categorical Logic & Topos Theory | Explores categories that behave like generalized universes of sets with internal intuitionistic logic, unifying algebraic geometry, sheaf theory, and non-standard mathematical foundations. It reveals deep connections between geometric topology and logic. | - Robert Goldblatt, *Topoi: The Categorial Analysis of Logic* (Dover Publications)<br>- Bart Jacobs, *Categorical Logic and Type Theory* (Elsevier)<br>- Saunders Mac Lane and Ieke Moerdijk, *Sheaves in Geometry and Logic: A First Introduction to Topos Theory* (Springer) |
+| Homotopy Type Theory & Univalent Foundations | Synthesizes intensional type theory, abstract homotopy theory, and higher category theory into a foundation for mathematics where isomorphic structures are identified via Voevodsky's Univalence Axiom. It provides an intrinsically computer-checkable foundation for modern abstract mathematics. | - [Homotopy Type Theory: Univalent Foundations of Mathematics](https://homotopytypetheory.org/book/) (The Univalent Foundations Program, Institute for Advanced Study)<br>- Egbert Rijke, *Introduction to Homotopy Type Theory* (Cambridge University Press)<br>- [nLab: Homotopy Type Theory](https://ncatlab.org/nlab/show/homotopy+type+theory) |
