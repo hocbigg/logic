@@ -1,46 +1,56 @@
-# Great Readings
+# Great Readings: Logic
 
-A curated collection of transformative books, seminal papers, and landmark monographs in Logic. Rather than standard introductory survey textbooks, these works represent the milestone intellectual breakthroughs where master logicians created formal systems, proved fundamental limits, and reshaped the philosophy of language, mathematics, and mind.
+A curated directory of landmark monographs, transformative essays, and milestone contributions to formal, mathematical, and philosophical logic. Rather than standard introductory survey textbooks, these works represent the primary breakthroughs where logicians developed symbolic languages, established the limitative theorems, and debated the nature of truth, proof, and meaning.
 
-## Foundational Classics & The Birth of Modern Logic
+## Historical Foundations of Modern Logic
 
-| Title | Author(s) | Type | Why It's Worth Reading |
-| --- | --- | --- | --- |
-| [*Begriffsschrift, a formula language, modeled upon that of arithmetic, for pure thought*](https://archive.org/details/conceptualnotati0000freg) (1879) | Gottlob Frege | Monograph / Primary Text | The foundational text of modern logic that invented quantificational predicate calculus and variable binding, permanently superseding Aristotelian syllogistic logic. |
-| [*Principia Mathematica*](https://archive.org/details/principiamathema01whit) (1910–1913) | Alfred North Whitehead & Bertrand Russell | Multi-Volume Treatise | The monumental logicist project that attempted to derive all mathematical truths from purely logical axioms via the theory of types, defining early 20th-century formalization. |
-| [*Tractatus Logico-Philosophicus*](https://archive.org/details/tractatuslogicop00wittrich) (1921) | Ludwig Wittgenstein | Philosophical Monograph | Introduced truth tables and the picture theory of language, arguing that logical propositions are tautologies that reveal the formal scaffolding of thought and reality. |
-| [*From Frege to Gödel: A Source Book in Mathematical Logic, 1879–1931*](https://archive.org/details/fromfregetogodel0000vanh) | Jean van Heijenoort (Ed.) | Anthology / Sourcebook | The definitive compilation of original landmark papers with historical commentaries, chronicling the emergence of modern logic from Frege's notation to Gödel's limitative theorems. |
+| Title | Author(s) |
+| --- | --- |
+| [*Begriffsschrift, a formula language, modeled upon that of arithmetic, for pure thought*](https://archive.org/details/conceptualnotati0000freg) | Gottlob Frege |
+| [*The Foundations of Arithmetic: A Logico-Mathematical Enquiry into the Concept of Number*](https://archive.org/details/foundationsofari00fregrich) | Gottlob Frege (translated by J. L. Austin) |
+| [*Principia Mathematica* (Vol. 1)](https://www.gutenberg.org/ebooks/78050) | Alfred North Whitehead & Bertrand Russell |
+| [*Tractatus Logico-Philosophicus*](https://www.gutenberg.org/ebooks/5740) | Ludwig Wittgenstein |
+| [*From Frege to Gödel: A Source Book in Mathematical Logic, 1879–1931*](https://books.google.com/books?isbn=9780674324497) | Jean van Heijenoort (Ed.) |
 
-## Seminal Papers on Incompleteness, Computability & Semantics
+## Incompleteness, Computability & Formal Semantics
 
-| Title | Author(s) | Type | Why It's Worth Reading |
-| --- | --- | --- | --- |
-| *On Formally Undecidable Propositions of Principia Mathematica and Related Systems I* (1931) | Kurt Gödel | Landmark Paper | Demonstrated via arithmetization (Gödel numbering) and diagonalization that any consistent formal system capable of basic arithmetic contains undecidable truths and cannot prove its own consistency. |
-| *On Computable Numbers, with an Application to the Entscheidungsproblem* (1936) | Alan M. Turing | Landmark Paper | Introduced the theoretical Turing machine, formalized the mechanical notion of algorithm, and proved that first-order logic is undecidable via the Halting Problem. |
-| *The Concept of Truth in Formalized Languages* (1935) | Alfred Tarski | Landmark Paper / Monograph | Formulated modern model-theoretic semantics, the T-schema, and the undefinability theorem showing that truth for a formal system cannot be defined within that system itself without contradiction. |
-| *Investigations into Logical Deduction* (*Untersuchungen über das logische Schließen*, 1934–1935) | Gerhard Gentzen | Landmark Paper | Invented natural deduction and the sequent calculus, proving the Cut-Elimination Theorem (Hauptsatz) that serves as the cornerstone of structural proof theory and computational logic. |
+| Title | Author(s) |
+| --- | --- |
+| [*On Formally Undecidable Propositions of Principia Mathematica and Related Systems*](https://books.google.com/books?isbn=9780486669809) | Kurt Gödel |
+| [*On Computable Numbers, with an Application to the Entscheidungsproblem*](https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf) | Alan M. Turing |
+| [*The Semantic Conception of Truth and the Foundations of Semantics*](https://www.ditext.com/tarski/tarski.html) | Alfred Tarski |
+| [*Logic, Semantics, Metamathematics: Papers from 1923 to 1938*](https://books.google.com/books?isbn=9780915144761) | Alfred Tarski |
+| [*The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions*](https://books.google.com/books?isbn=9780486432281) | Martin Davis (Ed.) |
 
-## Philosophy of Logic, Truth & Meaning
+## Proof Theory & Constructive Foundations
 
-| Title | Author(s) | Type | Why It's Worth Reading |
-| --- | --- | --- | --- |
-| *Two Dogmas of Empiricism* (1951) | Willard Van Orman Quine | Seminal Essay | Challenged the traditional analytic-synthetic distinction and reductionism, proposing a holist epistemology where logical laws are central to our web of belief but remain revisable in principle. |
-| [*Naming and Necessity*](https://archive.org/details/namingnecessity0000krip) (1980) | Saul A. Kripke | Monograph / Landmark Lectures | Transformed philosophical logic by distinguishing metaphysical necessity from epistemic a priority and establishing the causal-historical theory of reference via rigid designators across possible worlds. |
-| *Outline of a Theory of Truth* (1975) | Saul A. Kripke | Landmark Paper | Developed a non-hierarchical, fixed-point formal semantics using truth-value gaps, providing a radical alternative to Tarski's language hierarchy for handling semantic self-reference and the Liar Paradox. |
-| *The Logical Basis of Metaphysics* (1991) | Michael Dummett | Philosophical Monograph | Formulated a systematic justification of anti-realism and intuitionistic logic based on a verificationist theory of meaning, connecting proof theory directly to metaphysical debates. |
+| Title | Author(s) |
+| --- | --- |
+| [*Investigations into Logical Deduction* (in *The Collected Papers of Gerhard Gentzen*)](https://archive.org/details/collectedpaperso0000gent) | Gerhard Gentzen |
+| [*Intuitionism: An Introduction*](https://archive.org/details/intuitionismin00heyt) | Arend Heyting |
+| [*Linear Logic*](https://www.sciencedirect.com/science/article/pii/0304397587900454) | Jean-Yves Girard |
 
-## Non-Classical Paradigms, Paradoxes & Proof Structures
+## Philosophy of Logic, Language & Truth
 
-| Title | Author(s) | Type | Why It's Worth Reading |
-| --- | --- | --- | --- |
-| [*In Contradiction: A Study of the Transconsistent*](https://archive.org/details/incontradictions0000prie) (1987 / 2006) | Graham Priest | Monograph | The classic defense of dialetheism, presenting rigorous paraconsistent logical systems to prove that certain self-referential paradoxes are true contradictions. |
-| *Entailment: The Logic of Relevance and Necessity* (1975 / 1992) | Alan Ross Anderson & Nuel D. Belnap, Jr. | Landmark Treatise | Established the formal foundations of relevance logic, rejecting classical material and strict implications that permit irrelevance between premises and conclusions. |
-| *Linear Logic* (1987) | Jean-Yves Girard | Landmark Paper | Introduced a resource-sensitive substructural logic that refines classical and intuitionistic logic by treating hypotheses as consumable resources, establishing deep connections with category theory and computation. |
+| Title | Author(s) |
+| --- | --- |
+| [*Two Dogmas of Empiricism*](https://www.ditext.com/quine/quine.html) | Willard Van Orman Quine |
+| [*From a Logical Point of View: Nine Logico-Philosophical Essays*](https://books.google.com/books?isbn=9780674323513) | Willard Van Orman Quine |
+| [*Naming and Necessity*](https://books.google.com/books?isbn=9780674598461) | Saul A. Kripke |
+| [*Outline of a Theory of Truth*](https://files.commons.gc.cuny.edu/wp-content/blogs.dir/1358/files/2019/04/Outline-of-a-Theory-of-Truth.pdf) | Saul A. Kripke |
+| [*The Logical Basis of Metaphysics*](https://books.google.com/books?isbn=9780674537866) | Michael Dummett |
+| [*Philosophy of Logics*](https://books.google.com/books?isbn=9780521293297) | Susan Haack |
 
-## Interdisciplinary Classics & Meta-Reflections
+## Non-Classical, Substructural & Modal Logics
 
-| Title | Author(s) | Type | Why It's Worth Reading |
-| --- | --- | --- | --- |
-| [*Gödel, Escher, Bach: An Eternal Golden Braid*](https://archive.org/details/godelescherbache0000hofs) (1979) | Douglas R. Hofstadter | Interdisciplinary Classic | A Pulitzer Prize-winning exploration of self-reference, formal systems, strange loops, and symmetry across Gödelian logic, Bach's fugues, and Escher's woodcuts. |
-| [*Philosophy of Logics*](https://archive.org/details/philosophyoflogi0000haac) (1978) | Susan Haack | Monograph / Treatise | A clear and thorough philosophical investigation into validity, deduction, truth, modal systems, and the debate between classical logic and its non-classical rivals. |
-| [*Gödel’s Proof*](https://archive.org/details/gdelsproof00nage) (1958 / 2001) | Ernest Nagel & James R. Newman | Monograph | An exposition that walks the reader through the mathematical machinery of Gödel’s First Incompleteness Theorem without sacrificing formal integrity. |
+| Title | Author(s) |
+| --- | --- |
+| [*In Contradiction: A Study of the Transconsistent*](https://books.google.com/books?isbn=9780199263301) | Graham Priest |
+| [*Entailment: The Logic of Relevance and Necessity* (Vol. 1)](https://books.google.com/books?isbn=9780691071923) | Alan Ross Anderson & Nuel D. Belnap, Jr. |
+| [*An Introduction to Non-Classical Logic: From If to Is*](https://books.google.com/books?isbn=9780521671262) | Graham Priest |
+
+## Paradox, Self-Reference & Formal Thought
+
+| Title | Author(s) |
+| --- | --- |
+| [*Gödel, Escher, Bach: An Eternal Golden Braid*](https://books.google.com/books?isbn=9780465026562) | Douglas R. Hofstadter |

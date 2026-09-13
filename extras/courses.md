@@ -1,30 +1,31 @@
-# Great Courses
+# Great Courses: Logic
 
-A curated directory of standout, full-length university courses, OpenCourseWare repositories, and specialized video lecture series in Logic. These resources provide deep conceptual models, rigorous metatheoretical proofs, and advanced disciplinary perspectives beyond introductory survey curricula.
+A curated directory of standout, full-length university video courses, OpenCourseWare recordings, and specialized audiovisual lecture series in Logic. These resources provide deep conceptual models, rigorous proofs, and advanced disciplinary perspectives beyond introductory survey curricula.
 
 ## Mathematical Logic, Metatheory & Set Theory
 
-- [Logic II: Metatheory and Gödel's Incompleteness Theorems (MIT OpenCourseWare / Prof. Vann McGee)](https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/)
 - [Mathematical Logic: Propositional, First-Order Logic & Incompleteness (NPTEL / IIT Madras / Prof. Arindama Singh)](https://nptel.ac.in/courses/111106084)
-- Model Theory Graduate Lecture Series (UCLA / Prof. Artem Chernikov)
-- Introduction to Set Theory and Axiomatic Foundations (University of Oxford Podcasts / Prof. Robin Knight)
+- [Mathematical Logic: From First-Order Logic to Model Theory (YouTube / UCLA / Prof. Artem Chernikov)](https://www.youtube.com/playlist?list=PL54Pt_mZzBqibWHgesgEICeQHnwHom8xz)
+- The Power and Limits of Logic (YouTube / University of Melbourne / Prof. Greg Restall) - search "The Power and Limits of Logic Greg Restall" on YouTube
+- Axiomatic Set Theory (YouTube / University of Bristol / Prof. Philip Welch) - search "Axiomatic Set Theory Philip Welch" on YouTube
 
 ## Modal, Philosophical & Non-Classical Logics
 
-- [Modal Logic: Syntax, Semantics & Metalogic (MIT OpenCourseWare / Prof. Wesley H. Holliday)](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/)
-- [Critical Reasoning for Beginners (University of Oxford Podcasts / Marianne Talbot)](https://podcasts.ox.ac.uk/series/critical-reasoning-beginners)
-- Modal Logic and Non-Classical Systems Video Lectures (University of Calgary / Open Logic Project / Prof. Richard Zach)
-- Philosophical Logic and Theories of Truth (University of Oxford Webcasts / Prof. Volker Halbach)
+- [Hume's Central Principles: Logic, Relations, and Induction (University of Oxford Podcasts / Prof. Peter Millican)](https://podcasts.ox.ac.uk/series/humes-central-principles)
+- Modal Logic and Possible Worlds Semantics (YouTube / University of Nottingham & Attic Philosophy / Prof. Mark Jago) - search "How to do Modal Logic Attic Philosophy" on YouTube
+- Non-Classical Logic: Many-Valued, Intuitionistic, and Paraconsistent Systems (YouTube / University of Nottingham & Attic Philosophy / Prof. Mark Jago) - search "Non-Classical Logic Attic Philosophy" on YouTube
 
 ## Computational Logic, Type Theory & Formal Verification
 
 - [Theory of Computation: Automata, Computability & Complexity (MIT OpenCourseWare / Prof. Michael Sipser)](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)
-- [Constructive Logic: Natural Deduction, Sequent Calculus & Type Theory (Carnegie Mellon University / Prof. Frank Pfenning)](https://www.cs.cmu.edu/~fp/courses/15317-f17/)
-- [Software Foundations: Mechanized Proofs and Formal Verification in Coq (University of Pennsylvania / Prof. Benjamin C. Pierce et al.)](https://softwarefoundations.cis.upenn.edu/)
-- Automated Reasoning and Decision Procedures (Stanford University / Prof. Michael Genesereth)
+- [Automated Reasoning: Satisfiability (Coursera / Eindhoven University of Technology / Prof. Hans Zantema)](https://www.coursera.org/learn/automated-reasoning-sat)
+- [Automated Reasoning: Symbolic Model Checking (Coursera / Eindhoven University of Technology / Prof. Hans Zantema)](https://www.coursera.org/learn/automated-reasoning-symbolic-model-checking)
+- Automated Reasoning and Knowledge Compilation (YouTube / UCLA / Prof. Adnan Darwiche) - search "UCLA Automated Reasoning Group Lecture 1A" on YouTube
+- Computational Type Theory (YouTube / Oregon Programming Languages Summer School / Prof. Robert Harper) - search "Computational Type Theory Robert Harper OPLSS 2018" on YouTube
 
 ## Foundations of Mathematics & Categorical Logic
 
-- Category Theory and Categorical Logic (Carnegie Mellon University / Prof. Steve Awodey)
-- Homotopy Type Theory and Univalent Foundations Masterclass Series (Institute for Advanced Study)
-- Proof Theory and Reverse Mathematics Lecture Series (Association for Symbolic Logic / International Congress of Mathematicians)
+- [Category Theory for Programmers (YouTube / Prof. Bartosz Milewski)](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
+- [Category Theory Foundations (YouTube / Oregon Programming Languages Summer School / Prof. Steve Awodey)](https://www.youtube.com/watch?v=ZKmodCApZwk)
+- [Univalent Foundations of Mathematics (YouTube / Institute for Advanced Study / Prof. Vladimir Voevodsky)](https://www.youtube.com/watch?v=9f4pS9s-X2A)
+- Introduction to Homotopy Type Theory (YouTube / University of Ljubljana / Prof. Andrej Bauer) - search "2019-HoTT Introduction to homotopy type theory Andrej Bauer" on YouTube
