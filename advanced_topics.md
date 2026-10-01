@@ -2,10 +2,10 @@
 
 These specialization tracks are designed for independent learners who have mastered the Core Undergraduate Curriculum in formal logic, proof systems, and introductory metatheory. You are expected to choose one or two tracks aligned with your specific intellectual interests or technical applications, rather than completing every track.
 
-- [Mathematical Logic & Foundational Systems](#mathematical-logic--foundational-systems): Explores pure mathematical logic through model-theoretic structures, independence proofs in set theory, reverse mathematics, and degree hierarchies.
-- [Philosophical Logic & Non-Classical Logics](#philosophical-logic--non-classical-logics): Investigates non-classical deduction formalisms, relational possible-world semantics, constructive proof systems, and multi-agent epistemic models.
-- [Computational Logic, Automated Reasoning & Verification](#computational-logic-automated-reasoning--verification): Covers algorithmic decision procedures, SAT/SMT engines, temporal model checking, and interactive proof assistants.
-- [Categorical Logic, Type Theory & Formal Foundations](#categorical-logic-type-theory--formal-foundations): Unifies structural mathematics, typed lambda calculi, topos theory, and univalent foundations via the Curry-Howard-Lambek correspondence.
+- [Mathematical Logic & Foundational Systems](#mathematical-logic-foundational-systems): Explores pure mathematical logic through model-theoretic structures, independence proofs in set theory, reverse mathematics, and degree hierarchies.
+- [Philosophical Logic & Non-Classical Logics](#philosophical-logic-non-classical-logics): Investigates non-classical deduction formalisms, relational possible-world semantics, constructive proof systems, and multi-agent epistemic models.
+- [Computational Logic, Automated Reasoning & Verification](#computational-logic-automated-reasoning-verification): Covers algorithmic decision procedures, SAT/SMT engines, temporal model checking, and interactive proof assistants.
+- [Categorical Logic, Type Theory & Formal Foundations](#categorical-logic-type-theory-formal-foundations): Unifies structural mathematics, typed lambda calculi, topos theory, and univalent foundations via the Curry-Howard-Lambek correspondence.
 
 ## Mathematical Logic & Foundational Systems
 

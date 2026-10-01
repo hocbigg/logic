@@ -5,9 +5,35 @@ description: Path to a free self-taught education in Logic!
 
 ## Introduction
 
-The Logic curriculum is a complete education in Logic using online materials.
+Logic is the systematic study of valid inference, formal languages, and mathematical truth. Positioned at the intersection of philosophy, mathematics, and theoretical computer science, it provides rigorous tools to determine whether a conclusion follows from its premises, to formalize thought without the ambiguities of natural language, and to discover the fundamental limits of computation and deductive systems. Self-directed learners study logic to sharpen analytical reasoning, understand the foundational architecture of mathematics, or engage deeply with programming language theory and automated verification.
 
-## Communities
+This curriculum establishes the foundational core that every student of modern logic should master before specializing. It assumes no prior background in higher mathematics, formal philosophy, or symbolic notation. The sequence begins with natural-language argumentation and informal fallacies, transitions through basic proof techniques and naive set theory, and systematically constructs classical symbolic logic from the ground up.
+
+Because this guide focuses strictly on core literacy, it centers on classical propositional and first-order predicate logic alongside their metalogical properties. Specialized extensions—such as modal and non-classical logics, advanced model theory, categorical logic, and algorithmic verification—are deliberately left for later study once these foundations are solid.
+
+### Navigating the Curriculum
+
+Unlike modular disciplines where topics can be studied in arbitrary order, formal logic is strictly cumulative. Each subject in this curriculum builds directly on the conceptual vocabulary and techniques of the preceding one:
+
+- **Informal Logic and Critical Reasoning** develops the baseline skills of dissecting natural-language arguments, reconstructing implicit premises, distinguishing deductive validity from inductive strength, and detecting fallacies.
+- **Mathematical Foundations for Logic** introduces proof methods (such as direct proof, contradiction, and induction) and naive set theory (sets, relations, functions), providing the mathematical toolkit necessary to understand formal syntax and proofs about logical systems.
+- **Propositional Logic** formalizes truth-functional reasoning, covering formal syntax, truth tables, semantic validity, and natural deduction derivations where simple sentences serve as atomic building blocks.
+- **First-Order Predicate Logic** deepens this apparatus by analyzing internal sentence structure, introducing variables, predicates, and quantifiers, and formalizing semantics through model-theoretic interpretations.
+- **Metatheory of First-Order Logic** shifts perspective from proving theorems *within* a formal system to proving mathematical theorems *about* the system itself, establishing essential properties including Soundness, Completeness, and Compactness.
+- **Computability and Gödel's Incompleteness Theorems** concludes the core curriculum by examining the mathematical boundaries of formal systems, connecting Turing computability to formal arithmetic and showing that sufficiently powerful axiomatic systems cannot prove their own consistency or decide every mathematical truth.
+
+Work through the curriculum in this strict order. When studying, prioritize solving exercises, constructing formal derivations, and writing out proofs by hand; formal logic cannot be absorbed passively through reading alone.
+
+### Beyond the Core
+
+Completing this sequence provides the intellectual scaffolding needed to explore the broader logical landscape across this guide series:
+
+- Explore [Advanced Topics](advanced_topics.md) to pursue specialized tracks in model theory, non-classical and modal logics, automated theorem proving, or categorical logic and type theory.
+- Work through [Projects](projects.md) to apply your knowledge practically by programming SAT solvers, constructing automated theorem provers, or verifying proofs interactively in proof assistants like Lean or Coq.
+- Study seminal primary texts and landmark monographs by Frege, Gödel, Turing, Tarski, and Kripke in [Readings](extras/readings.md).
+- Reinforce your understanding with recorded university lectures and specialized masterclasses via [Courses](extras/courses.md).
+
+### Communities
 
 - Forums:
     - [The Philosophy Forum (Logic and Philosophy of Mathematics section)](https://thephilosophyforum.com/categories/10/logic-philosophy-of-mathematics)
@@ -97,7 +123,3 @@ Explores the formal limits of computation and deductive mathematical systems, co
 [Theory of Computation (MIT OpenCourseWare / Michael Sipser)](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/) - A complete video lecture series covering Turing machines, decidability, and the Church-Turing thesis, establishing the computational framework underlying Gödelian incompleteness.
 
 [Logic II (MIT OpenCourseWare / Vann McGee)](https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/) - A set of advanced lecture notes and problem sets examining computability, Robinson arithmetic, and Gödel's theorems from a formal logical and philosophical perspective.
-
-### Foundations Completed
-
-Completing this sequence covers the core undergraduate curriculum in modern logic. With this foundation in informal reasoning, propositional and first-order systems, metalogical proofs, computability, and incompleteness, you are prepared to pursue advanced specializations such as modal logic, axiomatic set theory, model theory, proof theory, or the philosophy of mathematics.
