@@ -1,249 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Hocbigg - Logic</title>
-<link rel="stylesheet" href="/logic/style.css">
-<meta name="description" content="Path to a free self-taught education in Logic!">
+  <title>Hocbigg - Logic</title>
+  <meta name="description" content="Path to a free self-taught education in Logic!">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/logic/">
+  <link rel="canonical" href="https://hocbigg.github.io/logic/">
+  <meta property="og:title" content="Hocbigg - Logic">
+  <meta property="og:description" content="Path to a free self-taught education in Logic!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/logic/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Hocbigg - Logic">
-<meta property="og:description" content="Path to a free self-taught education in Logic!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/logic/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/logic/">Logic</a>
-<a href="/logic/advanced_topics.html">Advanced Topics</a>
-<a href="/logic/projects.html">Projects</a>
-<a href="/logic/extras/courses.html">Extra Courses</a>
-<a href="/logic/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/logic/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/logic/">Logic</a></li>
+      <li><a href="/logic/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/logic/projects.html">Projects</a></li>
+      <li><a href="/logic/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/logic/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/logic/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/logic" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
 
+  <main id="main-content">
+    <article>
 <header class="page-header">
-  <img src="/images/logo.png" alt="">
+  <img src="/images/logo.png" alt="Hocbigg logo">
   <h1>Hocbigg - Logic</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Logic!</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-01">2026-10-01</time></small></p>
 </header>
-
-<h1 id="contents">Contents</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Logic is the systematic study of valid inference, formal languages, and mathematical truth. Positioned at the intersection of philosophy, mathematics, and theoretical computer science, it provides rigorous tools to determine whether a conclusion follows from its premises, to formalize thought without the ambiguities of natural language, and to discover the fundamental limits of computation and deductive systems. Self-directed learners study logic to sharpen analytical reasoning, understand the foundational architecture of mathematics, or engage deeply with programming language theory and automated verification.</p>
+<p>This curriculum establishes the foundational core that every student of modern logic should master before specializing. It assumes no prior background in higher mathematics, formal philosophy, or symbolic notation. The sequence begins with natural-language argumentation and informal fallacies, transitions through basic proof techniques and naive set theory, and systematically constructs classical symbolic logic from the ground up.</p>
+<p>Because this guide focuses strictly on core literacy, it centers on classical propositional and first-order predicate logic alongside their metalogical properties. Specialized extensions—such as modal and non-classical logics, advanced model theory, categorical logic, and algorithmic verification—are deliberately left for later study once these foundations are solid.</p>
+<h3 id="navigating-the-curriculum">Navigating the Curriculum</h3>
+<p>Unlike modular disciplines where topics can be studied in arbitrary order, formal logic is strictly cumulative. Each subject in this curriculum builds directly on the conceptual vocabulary and techniques of the preceding one:</p>
 <ul>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#communities">Communities</a></li>
-<li><a href="#curriculum">Curriculum</a></li>
-<li><a href="#code-of-conduct">Code of conduct</a></li>
+<li><strong>Informal Logic and Critical Reasoning</strong> develops the baseline skills of dissecting natural-language arguments, reconstructing implicit premises, distinguishing deductive validity from inductive strength, and detecting fallacies.</li>
+<li><strong>Mathematical Foundations for Logic</strong> introduces proof methods (such as direct proof, contradiction, and induction) and naive set theory (sets, relations, functions), providing the mathematical toolkit necessary to understand formal syntax and proofs about logical systems.</li>
+<li><strong>Propositional Logic</strong> formalizes truth-functional reasoning, covering formal syntax, truth tables, semantic validity, and natural deduction derivations where simple sentences serve as atomic building blocks.</li>
+<li><strong>First-Order Predicate Logic</strong> deepens this apparatus by analyzing internal sentence structure, introducing variables, predicates, and quantifiers, and formalizing semantics through model-theoretic interpretations.</li>
+<li><strong>Metatheory of First-Order Logic</strong> shifts perspective from proving theorems <em>within</em> a formal system to proving mathematical theorems <em>about</em> the system itself, establishing essential properties including Soundness, Completeness, and Compactness.</li>
+<li><strong>Computability and Gödel's Incompleteness Theorems</strong> concludes the core curriculum by examining the mathematical boundaries of formal systems, connecting Turing computability to formal arithmetic and showing that sufficiently powerful axiomatic systems cannot prove their own consistency or decide every mathematical truth.</li>
 </ul>
-<h1 id="summary">Summary</h1>
-<p>The Logic curriculum is a complete education in Logic using online materials.</p>
-<h2 id="organization">Organization</h2>
-<p>This repository is organized into three main components:</p>
+<p>Work through the curriculum in this strict order. When studying, prioritize solving exercises, constructing formal derivations, and writing out proofs by hand; formal logic cannot be absorbed passively through reading alone.</p>
+<h3 id="beyond-the-core">Beyond the Core</h3>
+<p>Completing this sequence provides the intellectual scaffolding needed to explore the broader logical landscape across this guide series:</p>
 <ul>
-<li><strong>Core Curriculum</strong> (this page): the foundational knowledge of the field;</li>
-<li><strong><a href="advanced_topics.html">Advanced Topics</a></strong>: focused study in specific areas;</li>
-<li><strong><a href="projects.html">Projects</a></strong>: support learning through practical application throughout the curriculum.</li>
+<li>Explore <a href="advanced_topics.html">Advanced Topics</a> to pursue specialized tracks in model theory, non-classical and modal logics, automated theorem proving, or categorical logic and type theory.</li>
+<li>Work through <a href="projects.html">Projects</a> to apply your knowledge practically by programming SAT solvers, constructing automated theorem provers, or verifying proofs interactively in proof assistants like Lean or Coq.</li>
+<li>Study seminal primary texts and landmark monographs by Frege, Gödel, Turing, Tarski, and Kripke in <a href="extras/readings.html">Readings</a>.</li>
+<li>Reinforce your understanding with recorded university lectures and specialized masterclasses via <a href="extras/courses.html">Courses</a>.</li>
 </ul>
-<p><strong>Process:</strong> Learners may work through the curriculum independently or collaboratively, and either sequentially or selectively.</p>
-<ul>
-<li>For simplicity, courses in the Core Curriculum are ordered according to their prerequisites.</li>
-<li>The Core Curriculum provides a shared foundation and is intended to be completed in full.</li>
-<li>Advanced Topics are optional; learners are encouraged to select one area of focus and complete all courses within that topic.</li>
-</ul>
-<p>Practical work is integrated through the <a href="projects.html">Projects section</a> and may be undertaken alongside coursework.</p>
-<p>Note: When there are courses or books that don't fit into the curriculum but are otherwise of high quality,
-they belong in <a href="extras/courses.html">extras/courses</a>, <a href="extras/readings.html">extras/readings</a>.</p>
-<p><a href="/CONTRIBUTING.html">How to contribute</a></p>
-<h1 id="communities">Communities</h1>
+<h3 id="communities">Communities</h3>
 <ul>
 <li>Forums:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://thephilosophyforum.com/categories/10/logic-philosophy-of-mathematics">The Philosophy Forum (Logic and Philosophy of Mathematics section)</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.physicsforums.com/forums/set-theory-logic-probability-statistics.78/">Physics Forums (Set Theory, Logic, Probability, Statistics)</a></li>
+<li><a href="https://thephilosophyforum.com/categories/10/logic-philosophy-of-mathematics" target="_blank" rel="noopener noreferrer">The Philosophy Forum (Logic and Philosophy of Mathematics section)</a></li>
+<li><a href="https://www.physicsforums.com/forums/set-theory-logic-probability-statistics.78/" target="_blank" rel="noopener noreferrer">Physics Forums (Set Theory, Logic, Probability, Statistics)</a></li>
 </ul>
 </li>
-<li>Subreddits: <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/logic/">r/logic</a></li>
-<li>You can also interact through <a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/logic/issues">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
-<li>
-<p>Join our Discord server (for discussions around this and other curricula): </p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/KHqAv4Nvm5"><img alt="discord link" src="/assets/discord.png" /></a></p>
-</li>
+<li>Subreddits: <a href="https://www.reddit.com/r/logic/" target="_blank" rel="noopener noreferrer">r/logic</a></li>
+<li>You can also interact through <a href="https://github.com/hocbigg/logic/issues" target="_blank" rel="noopener noreferrer">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
 </ul>
-<h1 id="curriculum">Curriculum</h1>
-<ul>
-<li><a href="#orientation--mathematical-literacy">Orientation &amp; Mathematical Literacy</a></li>
-<li><a href="#informal-logic--argumentation">Informal Logic &amp; Argumentation</a></li>
-<li><a href="#formal-logic-core-undergraduate-level">Formal Logic Core Undergraduate Level</a><ul>
-<li><a href="#a-propositional-logic">A. Propositional Logic</a></li>
-<li><a href="#b-first-order-predicate-logic">B. First-Order Predicate Logic</a></li>
-<li><a href="#c-proof-systems">C. Proof Systems</a></li>
-</ul>
-</li>
-<li><a href="#metatheory-of-logic">Metatheory of Logic</a></li>
-</ul>
-<p>Study them in this exact order:</p>
+<h2 id="curriculum">Curriculum</h2>
+<p>Study this curriculum in the order presented below:</p>
 <ol>
-<li>I. Orientation &amp; Mathematical Literacy  </li>
-<li>II. Informal Logic &amp; Argumentation  </li>
-<li>III. Formal Logic Core (Undergraduate Level) – complete all three subsections (A, B, and C)  </li>
-<li>IV. Metatheory of Logic  </li>
+<li>Informal Logic and Critical Reasoning</li>
+<li>Mathematical Foundations for Logic</li>
+<li>Propositional Logic</li>
+<li>First-Order Predicate Logic</li>
+<li>Metatheory of First-Order Logic</li>
+<li>Computability and Gödel's Incompleteness Theorems</li>
 </ol>
-<h2 id="orientation-mathematical-literacy">Orientation &amp; Mathematical Literacy</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mathematical Thinking &amp; Proofs</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/howtoproveitstru0000vell">How to Prove It</a> (Velleman, Archive.org)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/">Mathematics for Computer Science</a> (MIT OCW)</td>
-</tr>
-<tr>
-<td>Set Theory (Naïve)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/naivesettheory0000halm">Naive Set Theory</a> (Halmos, Archive.org)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/">Mathematics for Computer Science</a> (MIT OCW, via MCS)</td>
-</tr>
-<tr>
-<td>What Is Logic? (Philosophical Orientation)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/logic-classical/">Stanford Encyclopedia of Philosophy: Logic</a>, <a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/logic-philosophy/">Philosophy of Logic</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/logic-introduction">Introduction to Logic</a> (Stanford Online)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="informal-logic-argumentation">Informal Logic &amp; Argumentation</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Informal Logic</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project – Informal Logic</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/">Logic I</a> (MIT OCW Logic I)</td>
-</tr>
-<tr>
-<td>Argument Analysis &amp; Fallacies</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project – Critical Reasoning</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/logic-introduction">Introduction to Logic</a> (Stanford Introduction to Logic)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="formal-logic-core-undergraduate-level">Formal Logic Core (Undergraduate Level)</h2>
-<h3 id="a-propositional-logic">A. Propositional Logic</h3>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Syntax &amp; Semantics</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a> (Open Logic Project) / <a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project – Propositional Logic</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/logic-introduction">Introduction to Logic</a> (Stanford Introduction to Logic)</td>
-</tr>
-<tr>
-<td>Truth, Validity, Entailment</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a> / <a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/">Logic I</a> (MIT OCW Logic I)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="b-first-order-predicate-logic">B. First-Order Predicate Logic</h3>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Quantifiers &amp; Structures</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a> / <a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project – First-Order Logic</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/logic-introduction">Introduction to Logic</a> (Stanford Introduction to Logic)</td>
-</tr>
-<tr>
-<td>Models &amp; Interpretation</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a> / <a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/">Logic I</a> (MIT OCW Logic I)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="c-proof-systems">C. Proof Systems</h3>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Natural Deduction</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a> (Open Logic Project)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/">Logic I</a> (MIT OCW Logic I)</td>
-</tr>
-<tr>
-<td>Sequent Calculus (Intro – optional)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project</a></td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<h2 id="metatheory-of-logic">Metatheory of Logic</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Soundness &amp; Completeness</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://openlogicproject.org/">Open Logic Project – Metatheory</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/logic-introduction">Introduction to Logic</a> (Stanford Introduction to Logic)</td>
-</tr>
-<tr>
-<td>Computability (Intro) &amp; Gödel’s Theorems (overview)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/computabilitylog0000bool">Computability and Logic</a> (Boolos et al., Archive.org) / <a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/gdelsproof00nage">Gödel’s Proof</a> (Nagel &amp; Newman, Archive.org)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">Theory of Computation</a> (MIT OCW)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="congratulations">Congratulations</h2>
-<p>After completing the requirements of the curriculum above,
-you will have completed the equivalent of a full bachelor's degree in Logic.
-Congratulations!</p>
-<h1 id="code-of-conduct">Code of conduct</h1>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/code-of-conduct">Hocbigg's code of conduct</a>.</p>
-</article>
-</main>
+<h3 id="informal-logic-and-critical-reasoning">Informal Logic and Critical Reasoning</h3>
+<p>Introduces the core concepts of argument analysis in natural language, focusing on identifying premises and conclusions, evaluating deductive validity and inductive strength, and recognizing common informal fallacies.</p>
+<p><a href="https://podcasts.ox.ac.uk/series/critical-reasoning-romp-through-foothills-logic" target="_blank" rel="noopener noreferrer">Critical Reasoning: A Romp Through the Foothills of Logic (University of Oxford Podcasts / Marianne Talbot)</a> - A free introductory audio and video lecture series that guides absolute beginners through argument reconstruction, validity, and fallacy detection.</p>
+<p><a href="https://www.coursera.org/learn/understanding-arguments" target="_blank" rel="noopener noreferrer">Think Again I: How to Understand Arguments (Coursera / Duke University)</a> - An interactive MOOC alternative to the Oxford lectures that provides structured exercises in converting ordinary language into clear standard-form arguments.</p>
+<p><a href="https://books.google.com/books?isbn=9781285197364" target="_blank" rel="noopener noreferrer">Understanding Arguments: An Introduction to Informal Logic (Cengage / Walter Sinnott-Armstrong &amp; Robert Fogelin)</a> - The comprehensive textbook corresponding to the Think Again course series, recommended if you prefer thorough, written treatments of conversational dynamics and fallacy analysis.</p>
+<p><a href="https://books.google.com/books?isbn=9781305958098" target="_blank" rel="noopener noreferrer">A Concise Introduction to Logic (Cengage / Patrick J. Hurley &amp; Lori Watson)</a> - A widely used college textbook alternative to Sinnott-Armstrong and Fogelin, offering extensive exercise banks covering informal fallacies before introducing formal methods.</p>
+<p><a href="https://books.google.com/books?isbn=9780198811701" target="_blank" rel="noopener noreferrer">Logic: A Very Short Introduction (Oxford University Press / Graham Priest)</a> - A concise conceptual primer to read alongside your main course to understand the philosophical motivations, historical puzzles, and paradoxes behind logical theory.</p>
+<h3 id="mathematical-foundations-for-logic">Mathematical Foundations for Logic</h3>
+<p>Covers naive set theory, operations on relations and functions, and rigorous proof techniques required to understand and construct proofs in formal logic and metatheory.</p>
+<p><a href="https://books.google.com/books?isbn=9781108439534" target="_blank" rel="noopener noreferrer">How to Prove It: A Structured Approach (Cambridge University Press / Daniel J. Velleman)</a> - The primary textbook for self-directed learners, systematically explaining how to structure direct proofs, proofs by contradiction, and mathematical induction.</p>
+<p><a href="https://archive.org/details/naivesettheory0000halm" target="_blank" rel="noopener noreferrer">Naive Set Theory (D. Van Nostrand / Paul R. Halmos)</a> - A short, classic prose-based text that serves as a conceptual alternative or companion to Velleman for learning set operations, relations, and transfinite numbers.</p>
+<p><a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/" target="_blank" rel="noopener noreferrer">Mathematics for Computer Science (MIT OpenCourseWare / Tom Leighton &amp; Marten van Dijk)</a> - A complete university lecture series with video and assignments; work through Unit 1 (Proofs, Induction, and Sets) as an interactive companion to Velleman.</p>
+<h3 id="propositional-logic">Propositional Logic</h3>
+<p>Covers the formal syntax, truth-functional semantics, truth-table evaluations, and deductive proof systems of sentential logic.</p>
+<p><a href="https://forallx.openlogicproject.org/" target="_blank" rel="noopener noreferrer">forall x: Calgary: An Introduction to Formal Logic (Open Logic Project / P. D. Magnus, Tim Button, Aaron Thomas-Bolduc, &amp; Richard Zach)</a> - An open-access textbook covering truth-functional syntax, translations from natural language, truth tables, and Fitch-style natural deduction proofs.</p>
+<p><a href="https://www.logicmatters.net/ifl/" target="_blank" rel="noopener noreferrer">An Introduction to Formal Logic (Logic Matters / Peter Smith)</a> - A freely downloadable alternative textbook to forall x that provides exceptionally clear explanations, detailed proof strategies, and insightful philosophical commentary.</p>
+<p><a href="https://www.coursera.org/learn/logic-introduction" target="_blank" rel="noopener noreferrer">Introduction to Logic (Coursera / Stanford Online / Michael Genesereth)</a> - An interactive online course offering immediate automated feedback on propositional formalization, truth assignments, and proofs to use alongside either textbook.</p>
+<p><a href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/" target="_blank" rel="noopener noreferrer">Logic I (MIT OpenCourseWare / Ephraim Glick)</a> - A complete set of university lecture notes, handouts, and exams; work through the sentential logic units to test your formal deduction skills at university caliber.</p>
+<h3 id="first-order-predicate-logic">First-Order Predicate Logic</h3>
+<p>Expands formal systems to predicate logic, introducing quantifiers, variable binding, multi-place relations, model-theoretic structures, and first-order natural deduction.</p>
+<p><a href="https://forallx.openlogicproject.org/" target="_blank" rel="noopener noreferrer">forall x: Calgary: An Introduction to Formal Logic (Open Logic Project / P. D. Magnus et al.)</a> - Continue into Parts IV through VII of this text to learn quantifier translation, first-order interpretations, and quantifier derivation rules in natural deduction.</p>
+<p><a href="https://books.google.com/books?isbn=9781575866321" target="_blank" rel="noopener noreferrer">Language, Proof and Logic (CSLI Publications / Dave Barker-Plummer, Jon Barwise, &amp; John Etchemendy)</a> - A standard alternative textbook that uses intuitive visual world-modeling to teach formal interpretations, counter-models, and first-order proofs.</p>
+<p><a href="https://www.coursera.org/learn/logic-introduction" target="_blank" rel="noopener noreferrer">Introduction to Logic (Coursera / Stanford Online / Michael Genesereth)</a> - Complete the relational logic units of this course as an interactive digital companion to practice formalizing quantifiers and checking proofs.</p>
+<p><a href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/" target="_blank" rel="noopener noreferrer">Logic I (MIT OpenCourseWare / Ephraim Glick)</a> - Complete the predicate logic handouts and derivation problem sets from this course to solidify your technical mastery of models and formal derivations.</p>
+<h3 id="metatheory-of-first-order-logic">Metatheory of First-Order Logic</h3>
+<p>Investigates the meta-logical properties of formal systems using mathematical proof methods, establishing the Soundness, Completeness, Compactness, and Löwenheim-Skolem theorems.</p>
+<p><a href="https://slc.openlogicproject.org/" target="_blank" rel="noopener noreferrer">Sets, Logic, Computation: An Open Introduction to Metalogic (Open Logic Project / Richard Zach et al.)</a> - The primary open-access textbook for intermediate logic, designed to follow forall x with accessible, step-by-step proofs of soundness and Henkin completeness.</p>
+<p><a href="https://books.google.com/books?isbn=9780122384523" target="_blank" rel="noopener noreferrer">A Mathematical Introduction to Logic (Academic Press / Herbert B. Enderton)</a> - A standard, rigorous alternative textbook for students who prefer a traditional, mathematically compact presentation of first-order metalogic and model theory.</p>
+<p><a href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/" target="_blank" rel="noopener noreferrer">Logic I (MIT OpenCourseWare / Ephraim Glick)</a> - Work through the final units on mathematical induction over formulas and the Soundness Theorem to bridge the transition from introductory logic to formal metalogic.</p>
+<h3 id="computability-and-godels-incompleteness-theorems">Computability and Gödel's Incompleteness Theorems</h3>
+<p>Explores the formal limits of computation and deductive mathematical systems, covering Turing machines, the Halting Problem, formal arithmetic, Gödel numbering, and the First and Second Incompleteness Theorems.</p>
+<p><a href="https://www.logicmatters.net/igt/" target="_blank" rel="noopener noreferrer">An Introduction to Gödel's Theorems (Logic Matters / Peter Smith)</a> - The primary open-access textbook for this stage, providing a patient, detailed, and mathematically rigorous walkthrough of formal arithmetic and both incompleteness theorems.</p>
+<p><a href="https://books.google.com/books?isbn=9780521701464" target="_blank" rel="noopener noreferrer">Computability and Logic (Cambridge University Press / George S. Boolos, John P. Burgess, &amp; Richard C. Jeffrey)</a> - A canonical alternative textbook that integrates computability theory, recursive functions, Turing machines, and incompleteness into a unified curriculum.</p>
+<p><a href="https://books.google.com/books?isbn=9780814758373" target="_blank" rel="noopener noreferrer">Gödel's Proof (NYU Press / Ernest Nagel &amp; James R. Newman)</a> - A compact conceptual overview to read before diving into the full technical proofs, outlining Hilbert's program and Gödel's core argumentative strategy.</p>
+<p><a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/" target="_blank" rel="noopener noreferrer">Theory of Computation (MIT OpenCourseWare / Michael Sipser)</a> - A complete video lecture series covering Turing machines, decidability, and the Church-Turing thesis, establishing the computational framework underlying Gödelian incompleteness.</p>
+<p><a href="https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/" target="_blank" rel="noopener noreferrer">Logic II (MIT OpenCourseWare / Vann McGee)</a> - A set of advanced lecture notes and problem sets examining computability, Robinson arithmetic, and Gödel's theorems from a formal logical and philosophical perspective.</p>
+    </article>
+  </main>
 
 </body>
 </html>

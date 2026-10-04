@@ -1,190 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Advanced Topics</title>
-<link rel="stylesheet" href="/logic/style.css">
-<meta name="description" content="">
+  <title>Advanced Topics: Logic</title>
+  <meta name="description" content="Advanced Topics: Logic curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/logic/">
+  <link rel="canonical" href="https://hocbigg.github.io/logic/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics: Logic">
+  <meta property="og:description" content="Advanced Topics: Logic curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/logic/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Advanced Topics">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/logic/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/logic/">Logic</a>
-<a href="/logic/advanced_topics.html">Advanced Topics</a>
-<a href="/logic/projects.html">Projects</a>
-<a href="/logic/extras/courses.html">Extra Courses</a>
-<a href="/logic/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/logic/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/logic/">Logic</a></li>
+      <li><a href="/logic/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/logic/projects.html">Projects</a></li>
+      <li><a href="/logic/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/logic/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/logic/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/logic" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
 
-<h1 id="advanced-topics">Advanced Topics</h1>
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-logic">Advanced Topics: Logic</h1>
+<p>These specialization tracks are designed for independent learners who have mastered the Core Undergraduate Curriculum in formal logic, proof systems, and introductory metatheory. You are expected to choose one or two tracks aligned with your specific intellectual interests or technical applications, rather than completing every track.</p>
 <ul>
-<li><a href="#philosophical-logic">Philosophical Logic</a></li>
-<li><a href="#logic-for-computer-science--ai">Logic for Computer Science &amp; AI</a></li>
-<li><a href="#mathematical-logic-advanced">Mathematical Logic Advanced</a></li>
-<li><a href="#limits-and-extensions-of-classical-logic">Limits and Extensions of Classical Logic</a></li>
+<li><a href="#mathematical-logic-foundational-systems">Mathematical Logic &amp; Foundational Systems</a>: Explores pure mathematical logic through model-theoretic structures, independence proofs in set theory, reverse mathematics, and degree hierarchies.</li>
+<li><a href="#philosophical-logic-non-classical-logics">Philosophical Logic &amp; Non-Classical Logics</a>: Investigates non-classical deduction formalisms, relational possible-world semantics, constructive proof systems, and multi-agent epistemic models.</li>
+<li><a href="#computational-logic-automated-reasoning-verification">Computational Logic, Automated Reasoning &amp; Verification</a>: Covers algorithmic decision procedures, SAT/SMT engines, temporal model checking, and interactive proof assistants.</li>
+<li><a href="#categorical-logic-type-theory-formal-foundations">Categorical Logic, Type Theory &amp; Formal Foundations</a>: Unifies structural mathematics, typed lambda calculi, topos theory, and univalent foundations via the Curry-Howard-Lambek correspondence.</li>
 </ul>
-<p>You should only begin these <strong>after completing the entire Core sequence</strong> (sections I–V). Each track goes deeper in one direction (<em>Choose according to your goals</em>):</p>
-<ul>
-<li>
-<p><strong>Philosophical Logic</strong><br />
-  Focuses on the connections between logic, philosophy, language, knowledge, and norms.</p>
-</li>
-<li>
-<p><strong>Logic for Computer Science &amp; AI</strong><br />
-  Focuses on the practical and theoretical tools used in programming, computation, verification, and artificial intelligence.</p>
-</li>
-<li>
-<p><strong>Mathematical Logic (Advanced)</strong><br />
-  Focuses on the most abstract and foundational parts of modern logic as a branch of mathematics.</p>
-</li>
-<li>
-<p><strong>Limits and Extensions of Classical Logic</strong>
-  Modal logic, non-classical logics survey, and detailed Gödel incompleteness</p>
-</li>
-</ul>
-<h2 id="philosophical-logic">Philosophical Logic</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Philosophical Logic</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/philosophicallog0000burg">Philosophical Logic</a></strong> (Burgess, Archive.org)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Logic &amp; Language</td>
-<td><em>Logic, Language, and Meaning</em> (Gamut)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Epistemic Logic</td>
-<td><em>Reasoning About Knowledge</em> (Fagin et al.)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Deontic Logic</td>
-<td><em>Handbook of Deontic Logic</em> (Open PDF)</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<h2 id="logic-for-computer-science-ai">Logic for Computer Science &amp; AI</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Automata &amp; Formal Languages</td>
-<td><em>Introduction to Automata Theory</em> (Hopcroft et al.)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">Automata</a></strong> (MIT OCW Automata, related)</td>
-</tr>
-<tr>
-<td>Logic Programming</td>
-<td><em>Foundations of Logic Programming</em> (Lloyd)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Temporal Logic</td>
-<td><em>Temporal Logic</em> (Emerson)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Automated Theorem Proving</td>
-<td><em>Handbook of Automated Reasoning</em> (Vol. I, open sections)</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<h2 id="mathematical-logic-advanced">Mathematical Logic (Advanced)</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Model Theory</td>
-<td>Marker – <em>Model Theory</em> (Free PDF)</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Axiomatic Set Theory</td>
-<td>Jech – <em>Set Theory</em></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Large Cardinals</td>
-<td>Kanamori – <em>The Higher Infinite</em></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Reverse Mathematics</td>
-<td>Simpson – <em>Subsystems of Second-Order Arithmetic</em></td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<h2 id="limits-and-extensions-of-classical-logic">Limits and Extensions of Classical Logic</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Gödel’s Incompleteness Theorems</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/gdelsproof00nage">Gödel’s Proof</a> (Nagel &amp; Newman, Archive.org)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">Theory of Computation</a> (MIT OCW)</td>
-</tr>
-<tr>
-<td>Modal Logic</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/introductiontono0000prie">An Introduction to Non-Classical Logic</a> (Priest)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/">Modal Logic</a> (MIT OCW)</td>
-</tr>
-<tr>
-<td>Non-Classical Logics (Survey)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/introductiontono0000prie">Priest</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/">Modal Logic</a> (MIT OCW Modal Logic)</td>
-</tr>
-</tbody>
-</table>
-</article>
-</main>
+<h2 id="mathematical-logic-foundational-systems">Mathematical Logic &amp; Foundational Systems</h2>
+<p>Explores advanced pure logic through mathematical structures, relative consistency proofs, axiomatic calibration of mathematical theorems, and generalized computability.</p>
+<p>Model Theory: <a href="https://books.google.com/books?isbn=9780387987606" target="_blank" rel="noopener noreferrer">Model Theory: An Introduction (David Marker / Springer)</a> - Explores definable sets, quantifier elimination, type spaces, and Morley's categorization theorem, bridging formal logic with abstract algebra.</p>
+<p>Axiomatic Set Theory &amp; Independence: <a href="https://books.google.com/books?isbn=9781848900509" target="_blank" rel="noopener noreferrer">Set Theory (Kenneth Kunen / College Publications)</a> - Develops combinatorial set theory, Martin's axiom, Gödel's constructible universe, and Cohen forcing to establish the independence of the Continuum Hypothesis.</p>
+<p>Proof Theory &amp; Reverse Mathematics: <a href="https://books.google.com/books?isbn=9780521884396" target="_blank" rel="noopener noreferrer">Subsystems of Second Order Arithmetic (Stephen G. Simpson / Cambridge University Press)</a> - Analyzes the exact axiomatic strength necessary to prove core theorems across analysis, algebra, and topology using the Big Five subsystems of second-order arithmetic.</p>
+<p>Computability &amp; Degree Theory: <a href="https://books.google.com/books?isbn=9783642319327" target="_blank" rel="noopener noreferrer">Turing Computability: Theory and Applications (Robert I. Soare / Springer)</a> - Investigates relative computability, the lattice of computably enumerable sets, finite and infinite injury priority arguments, and the structural complexity of Turing degrees.</p>
+<h2 id="philosophical-logic-non-classical-logics">Philosophical Logic &amp; Non-Classical Logics</h2>
+<p>Investigates formal deductive systems that depart from classical truth conditions, modeling modalities, constructive proof requirements, information sensitivity, and rational multi-agent interaction.</p>
+<p>Modal Logic &amp; Relational Semantics: <a href="https://bd.openlogicproject.org/" target="_blank" rel="noopener noreferrer">Boxes and Diamonds: An Open Introduction to Modal Logic (Richard Zach / Open Logic Project)</a> - An open-access textbook covering propositional modal systems, Kripke relational semantics, frame correspondence theory, and Henkin-style completeness proofs.</p>
+<p>Modal Logic &amp; Relational Semantics: <a href="https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/" target="_blank" rel="noopener noreferrer">Modal Logic (MIT OpenCourseWare / Stephen Yablo)</a> - Complementary university course providing advanced lecture notes and problem sets on possible-world semantics, modal predicate logic, and counterpart theory.</p>
+<p>Intuitionistic &amp; Constructive Logic: <a href="https://books.google.com/books?isbn=9780198505242" target="_blank" rel="noopener noreferrer">Elements of Intuitionism (Michael Dummett / Oxford University Press)</a> - The definitive philosophical and logical treatise analyzing the rejection of the principle of excluded middle, proof-conditional semantics, and constructive analysis.</p>
+<p>Many-Valued &amp; Substructural Logics: <a href="https://books.google.com/books?isbn=9780521671262" target="_blank" rel="noopener noreferrer">An Introduction to Non-Classical Logic: From If to Is (Graham Priest / Cambridge University Press)</a> - A unified, tableau-driven presentation of many-valued logics, paraconsistency, relevance logics, and conditional logics for philosophical analysis.</p>
+<p>Epistemic &amp; Multi-Agent Logic: <a href="https://books.google.com/books?isbn=9780262562003" target="_blank" rel="noopener noreferrer">Reasoning About Knowledge (Ronald Fagin, Joseph Y. Halpern, Yoram Moses, &amp; Moshe Y. Vardi / MIT Press)</a> - The canonical interdisciplinary text establishing modal epistemic logics, common knowledge, distributed protocols, and multi-agent information update.</p>
+<h2 id="computational-logic-automated-reasoning-verification">Computational Logic, Automated Reasoning &amp; Verification</h2>
+<p>Focuses on the algorithmic automation of logical reasoning, automated satisfiability decision procedures, formal hardware and software verification, and declarative problem-solving.</p>
+<p>Automated Reasoning &amp; Decision Procedures: <a href="https://www.coursera.org/learn/automated-reasoning-sat" target="_blank" rel="noopener noreferrer">Automated Reasoning: Satisfiability (Coursera / Eindhoven University of Technology)</a> - An interactive MOOC covering practical algorithmic solving, including resolution, the CDCL framework, simplex for linear inequalities, and SMT encoding.</p>
+<p>Automated Reasoning &amp; Decision Procedures: <a href="https://books.google.com/books?isbn=9783662504963" target="_blank" rel="noopener noreferrer">Decision Procedures: An Algorithmic Point of View (Daniel Kroening &amp; Ofer Strichman / Springer)</a> - A textbook companion detailing the underlying theory of Nelson-Oppen theory combinations, equality with uninterpreted functions, and bit-vector decision algorithms.</p>
+<p>Temporal Logic &amp; Model Checking: <a href="https://books.google.com/books?isbn=9780262026499" target="_blank" rel="noopener noreferrer">Principles of Model Checking (Christel Baier &amp; Joost-Pieter Katoen / MIT Press)</a> - The comprehensive standard text covering transition systems, omega-automata, LTL, CTL, fairness constraints, and probabilistic verification algorithms.</p>
+<p>Interactive Theorem Proving: <a href="https://softwarefoundations.cis.upenn.edu/" target="_blank" rel="noopener noreferrer">Software Foundations (University of Pennsylvania / Benjamin C. Pierce et al.)</a> - An open-access, machine-checked course series that teaches functional programming, formal logic, and software verification using the Coq/Rocq proof assistant.</p>
+<p>Logic Programming &amp; Answer Set Solving: <a href="https://books.google.com/books?isbn=9783031004339" target="_blank" rel="noopener noreferrer">Answer Set Solving in Practice (Martin Gebser, Roland Kaminski, Benjamin Kaufmann, &amp; Torsten Schaub / Springer)</a> - Examines declarative problem-solving under stable model semantics, covering language constructs, non-monotonic reasoning, and Boolean constraint solving algorithms.</p>
+<h2 id="categorical-logic-type-theory-formal-foundations">Categorical Logic, Type Theory &amp; Formal Foundations</h2>
+<p>Unifies structural algebra, type systems, topos theory, and univalent homotopy foundations to articulate modern structural alternatives to traditional set-theoretic foundations.</p>
+<p>Category Theory for Logicians: <a href="https://books.google.com/books?isbn=9780199237180" target="_blank" rel="noopener noreferrer">Category Theory (Steve Awodey / Oxford University Press)</a> - Introduces categories, functors, natural transformations, limits, and adjoints, emphasizing connections to logic, universal algebra, and cartesian closed categories.</p>
+<p>Type Theory &amp; Lambda Calculi: <a href="https://books.google.com/books?isbn=9780262162098" target="_blank" rel="noopener noreferrer">Types and Programming Languages (Benjamin C. Pierce / MIT Press)</a> - A systematic exposition of typed lambda calculi, operational semantics, subtyping, and the Curry-Howard correspondence relating propositions to types and proofs to programs.</p>
+<p>Categorical Logic &amp; Topos Theory: <a href="https://books.google.com/books?isbn=9780486450261" target="_blank" rel="noopener noreferrer">Topoi: The Categorial Analysis of Logic (Robert Goldblatt / Dover Publications)</a> - An accessible introduction to elementary toposes as generalized universes of sets endowed with internal intuitionistic logic, connecting category theory with model theory.</p>
+<p>Homotopy Type Theory &amp; Univalent Foundations: <a href="https://homotopytypetheory.org/book/" target="_blank" rel="noopener noreferrer">Homotopy Type Theory: Univalent Foundations of Mathematics (The Univalent Foundations Program / Institute for Advanced Study)</a> - The foundational open-access text establishing the synthesis of intensional type theory, higher category theory, and abstract homotopy theory via the Univalence Axiom.</p>
+    </article>
+  </main>
 
 </body>
 </html>

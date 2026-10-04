@@ -1,108 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Great Readings</title>
-<link rel="stylesheet" href="/logic/style.css">
-<meta name="description" content="">
+  <title>Great Readings: Logic</title>
+  <meta name="description" content="Great Readings: Logic curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/logic/">
+  <link rel="canonical" href="https://hocbigg.github.io/logic/extras/readings.html">
+  <meta property="og:title" content="Great Readings: Logic">
+  <meta property="og:description" content="Great Readings: Logic curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/logic/extras/readings.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Great Readings">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/logic/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/logic/">Logic</a>
-<a href="/logic/advanced_topics.html">Advanced Topics</a>
-<a href="/logic/projects.html">Projects</a>
-<a href="/logic/extras/courses.html">Extra Courses</a>
-<a href="/logic/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/logic/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/logic/">Logic</a></li>
+      <li><a href="/logic/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/logic/projects.html">Projects</a></li>
+      <li><a href="/logic/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/logic/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/logic/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/logic" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
 
-<h1 id="great-readings">Great Readings</h1>
-<p>This document consists of great books or articles on Logic.
-Some are here because there is a course covering the same material;
-some are just great books that you should read at some point in your career.</p>
-<p>Once you have made it through most of the curriculum, knowing whether a book is worth your time will become easier.
-Or, if you are struggling in one of the courses, perhaps reading a book on the subject will help.</p>
-<h2 id="introductory-general">Introductory &amp; General</h2>
-<table>
+  <main id="main-content">
+    <article>
+
+<h1 id="great-readings-logic">Great Readings: Logic</h1>
+<p>A curated directory of landmark monographs, transformative essays, and milestone contributions to formal, mathematical, and philosophical logic. Rather than standard introductory survey textbooks, these works represent the primary breakthroughs where logicians developed symbolic languages, established the limitative theorems, and debated the nature of truth, proof, and meaning.</p>
+<h2 id="historical-foundations-of-modern-logic">Historical Foundations of Modern Logic</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Author(s)</th>
+<th>Title</th>
+<th>Author(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Gödel-Escher-Bach-Eternal-Golden/dp/0465026567">Gödel, Escher, Bach: An Eternal Golden Braid</a></td>
-<td style="text-align: center;">Douglas R. Hofstadter</td>
+<td><a href="https://archive.org/details/conceptualnotati0000freg" target="_blank" rel="noopener noreferrer"><em>Begriffsschrift, a formula language, modeled upon that of arithmetic, for pure thought</em></a></td>
+<td>Gottlob Frege</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Computability-Logic-George-S-Boolos/dp/0521701465">Computability and Logic</a></td>
-<td style="text-align: center;">George S. Boolos, John P. Burgess, Richard C. Jeffrey</td>
+<td><a href="https://archive.org/details/foundationsofari00fregrich" target="_blank" rel="noopener noreferrer"><em>The Foundations of Arithmetic: A Logico-Mathematical Enquiry into the Concept of Number</em></a></td>
+<td>Gottlob Frege (translated by J. L. Austin)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Introduction-Mathematical-Logic-Elliott-Mendelson/dp/1139989560">Introduction to Mathematical Logic</a></td>
-<td style="text-align: center;">Elliott Mendelson</td>
+<td><a href="https://www.gutenberg.org/ebooks/78050" target="_blank" rel="noopener noreferrer"><em>Principia Mathematica</em> (Vol. 1)</a></td>
+<td>Alfred North Whitehead &amp; Bertrand Russell</td>
+</tr>
+<tr>
+<td><a href="https://www.gutenberg.org/ebooks/5740" target="_blank" rel="noopener noreferrer"><em>Tractatus Logico-Philosophicus</em></a></td>
+<td>Ludwig Wittgenstein</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674324497" target="_blank" rel="noopener noreferrer"><em>From Frege to Gödel: A Source Book in Mathematical Logic, 1879–1931</em></a></td>
+<td>Jean van Heijenoort (Ed.)</td>
 </tr>
 </tbody>
-</table>
-<h2 id="mathematical-logic">Mathematical Logic</h2>
-<table>
+</table></div>
+<h2 id="incompleteness-computability-formal-semantics">Incompleteness, Computability &amp; Formal Semantics</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Author(s)</th>
+<th>Title</th>
+<th>Author(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Mathematical-Logic-Joseph-R-Shoenfield/dp/1568811357">Mathematical Logic</a></td>
-<td style="text-align: center;">Joseph R. Shoenfield</td>
+<td><a href="https://books.google.com/books?isbn=9780486669809" target="_blank" rel="noopener noreferrer"><em>On Formally Undecidable Propositions of Principia Mathematica and Related Systems</em></a></td>
+<td>Kurt Gödel</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Tour-Through-Mathematical-Logic-Carnegie/dp/0883850362">A Tour Through Mathematical Logic</a></td>
-<td style="text-align: center;">Robert S. Wolf</td>
+<td><a href="https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf" target="_blank" rel="noopener noreferrer"><em>On Computable Numbers, with an Application to the Entscheidungsproblem</em></a></td>
+<td>Alan M. Turing</td>
+</tr>
+<tr>
+<td><a href="https://www.ditext.com/tarski/tarski.html" target="_blank" rel="noopener noreferrer"><em>The Semantic Conception of Truth and the Foundations of Semantics</em></a></td>
+<td>Alfred Tarski</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780915144761" target="_blank" rel="noopener noreferrer"><em>Logic, Semantics, Metamathematics: Papers from 1923 to 1938</em></a></td>
+<td>Alfred Tarski</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780486432281" target="_blank" rel="noopener noreferrer"><em>The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions</em></a></td>
+<td>Martin Davis (Ed.)</td>
 </tr>
 </tbody>
-</table>
-<h2 id="philosophical-logic">Philosophical Logic</h2>
-<table>
+</table></div>
+<h2 id="proof-theory-constructive-foundations">Proof Theory &amp; Constructive Foundations</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Author(s)</th>
+<th>Title</th>
+<th>Author(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Doubt-Truth-Be-Liar/dp/0199238511">Doubt Truth to Be a Liar</a></td>
-<td style="text-align: center;">Graham Priest</td>
+<td><a href="https://archive.org/details/collectedpaperso0000gent" target="_blank" rel="noopener noreferrer"><em>Investigations into Logical Deduction</em> (in <em>The Collected Papers of Gerhard Gentzen</em>)</a></td>
+<td>Gerhard Gentzen</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Contradiction-Graham-Priest/dp/0199263302">In Contradiction</a></td>
-<td style="text-align: center;">Graham Priest</td>
+<td><a href="https://archive.org/details/intuitionismin00heyt" target="_blank" rel="noopener noreferrer"><em>Intuitionism: An Introduction</em></a></td>
+<td>Arend Heyting</td>
+</tr>
+<tr>
+<td><a href="https://www.sciencedirect.com/science/article/pii/0304397587900454" target="_blank" rel="noopener noreferrer"><em>Linear Logic</em></a></td>
+<td>Jean-Yves Girard</td>
 </tr>
 </tbody>
-</table>
-</article>
-</main>
+</table></div>
+<h2 id="philosophy-of-logic-language-truth">Philosophy of Logic, Language &amp; Truth</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.ditext.com/quine/quine.html" target="_blank" rel="noopener noreferrer"><em>Two Dogmas of Empiricism</em></a></td>
+<td>Willard Van Orman Quine</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674323513" target="_blank" rel="noopener noreferrer"><em>From a Logical Point of View: Nine Logico-Philosophical Essays</em></a></td>
+<td>Willard Van Orman Quine</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674598461" target="_blank" rel="noopener noreferrer"><em>Naming and Necessity</em></a></td>
+<td>Saul A. Kripke</td>
+</tr>
+<tr>
+<td><a href="https://files.commons.gc.cuny.edu/wp-content/blogs.dir/1358/files/2019/04/Outline-of-a-Theory-of-Truth.pdf" target="_blank" rel="noopener noreferrer"><em>Outline of a Theory of Truth</em></a></td>
+<td>Saul A. Kripke</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674537866" target="_blank" rel="noopener noreferrer"><em>The Logical Basis of Metaphysics</em></a></td>
+<td>Michael Dummett</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780521293297" target="_blank" rel="noopener noreferrer"><em>Philosophy of Logics</em></a></td>
+<td>Susan Haack</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="non-classical-substructural-modal-logics">Non-Classical, Substructural &amp; Modal Logics</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199263301" target="_blank" rel="noopener noreferrer"><em>In Contradiction: A Study of the Transconsistent</em></a></td>
+<td>Graham Priest</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780691071923" target="_blank" rel="noopener noreferrer"><em>Entailment: The Logic of Relevance and Necessity</em> (Vol. 1)</a></td>
+<td>Alan Ross Anderson &amp; Nuel D. Belnap, Jr.</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780521671262" target="_blank" rel="noopener noreferrer"><em>An Introduction to Non-Classical Logic: From If to Is</em></a></td>
+<td>Graham Priest</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="paradox-self-reference-formal-thought">Paradox, Self-Reference &amp; Formal Thought</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780465026562" target="_blank" rel="noopener noreferrer"><em>Gödel, Escher, Bach: An Eternal Golden Braid</em></a></td>
+<td>Douglas R. Hofstadter</td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+  </main>
 
 </body>
 </html>

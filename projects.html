@@ -1,127 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Projects</title>
-<link rel="stylesheet" href="/logic/style.css">
-<meta name="description" content="">
+  <title>Projects</title>
+  <meta name="description" content="Projects curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/logic/">
+  <link rel="canonical" href="https://hocbigg.github.io/logic/projects.html">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/logic/projects.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Projects">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/logic/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/logic/">Logic</a>
-<a href="/logic/advanced_topics.html">Advanced Topics</a>
-<a href="/logic/projects.html">Projects</a>
-<a href="/logic/extras/courses.html">Extra Courses</a>
-<a href="/logic/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/logic/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/logic/">Logic</a></li>
+      <li><a href="/logic/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/logic/projects.html">Projects</a></li>
+      <li><a href="/logic/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/logic/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/logic/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/logic" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
 
 <h1 id="projects">Projects</h1>
-<p>This page is a curated collection of well-written, step-by-step guides for learning Logic through hands-on, project-based practice.</p>
 <blockquote>
-<p><em>What I cannot create, I do not understand — Richard Feynman.</em></p>
+<p>"What I cannot create, I do not understand." — Richard Feynman</p>
 </blockquote>
-<p>These projects are meant to support learning throughout the curriculum, not only at the end.<br />
-By building, writing, creating, or reconstructing real artifacts in the field, learners develop practical understanding alongside theoretical study.</p>
-<h2 id="tutorials">Tutorials</h2>
 <ul>
-<li><a href="#build-your-own-propositional-calculus">Propositional Calculus</a></li>
-<li><a href="#build-your-own-first-order-logic">First-Order Logic</a></li>
-<li><a href="#build-your-own-modal-logic">Modal Logic</a></li>
-<li><a href="#construct-your-own-proof-system">Proof System</a></li>
-<li><a href="#construct-your-own-natural-deduction-system">Natural Deduction System</a></li>
-<li><a href="#construct-your-own-sequent-calculus">Sequent Calculus</a></li>
-<li><a href="#construct-your-own-tableau-system">Tableau System</a></li>
-<li><a href="#construct-your-own-hilbert-style-system">Hilbert-style Axiomatic System</a></li>
-<li><a href="#build-your-own-automated-theorem-prover">Automated Theorem Prover</a></li>
-<li><a href="#build-your-own-proof-assistant-kernel">Proof Assistant Kernel</a></li>
-<li><a href="#define-your-own-logical-semantics">Logical Semantics</a></li>
-<li><a href="#build-your-own-model-checker">Model Checker</a></li>
-<li><a href="#build-your-own-logical-inference-engine">Logical Inference Engine</a></li>
-<li><a href="#construct-your-own-philosophical-argument">Argument</a></li>
-<li><a href="#write-your-own-formal-proof">Formal Proof</a></li>
+<li><a href="#build-your-own-automated-theorem-provers">Automated Theorem Provers</a></li>
+<li><a href="#implement-your-own-sat-solvers">SAT Solvers</a></li>
+<li><a href="#construct-your-own-smt-encodings">SMT Encodings</a></li>
+<li><a href="#formalize-your-own-mathematical-proofs">Mathematical Proofs</a></li>
+<li><a href="#build-your-own-model-checkers">Model Checkers</a></li>
+<li><a href="#write-your-own-formal-specifications">Formal Specifications</a></li>
+<li><a href="#diagram-your-own-argument-maps">Argument Maps</a></li>
+<li><a href="#write-your-own-logic-programs">Logic Programs</a></li>
 </ul>
-<h3 id="propositional-calculus">Propositional Calculus</h3>
+<h2 id="build-your-own-automated-theorem-provers">Build your own automated theorem provers</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://avigad.github.io/lamr/implementing_prop_logic.html">Implementing Propositional Logic in Lean (syntax, semantics, basic procedures)</a> (<em>Online book chapter / code tutorial</em>)</li>
+<li><a href="https://jens-otten.de/tutorial_cade19/" target="_blank" rel="noopener noreferrer">Build Your Own First-Order Prover (Jens Otten / CADE 2019)</a></li>
+<li><a href="https://jens-otten.de/tutorial_tableaux19/" target="_blank" rel="noopener noreferrer">How to Build an Automated Theorem Prover (Jens Otten / TABLEAUX 2019)</a></li>
+<li><a href="https://avigad.github.io/lamr/implementing_first_order_logic.html" target="_blank" rel="noopener noreferrer">Implementing First-Order Logic in Lean (Jeremy Avigad, Marijn Heule, &amp; Wojciech Nawrocki)</a></li>
+<li><a href="https://pauldownen.com/publications/sequent-intro.pdf" target="_blank" rel="noopener noreferrer">A Tutorial on Computational Classical Logic and the Sequent Calculus (Paul Downen)</a></li>
 </ul>
-<h3 id="first-order-logic">First-Order Logic</h3>
+<h2 id="implement-your-own-sat-solvers">Implement your own SAT solvers</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://avigad.github.io/lamr/implementing_first_order_logic.html">Implementing First-Order Logic in Lean (syntax, semantics, unification)</a> (<em>Online book chapter / code tutorial</em>)</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://jens-otten.de/tutorial_cade19/">Build Your Own First-Order Prover tutorial series (CADE hands-on parts)</a> (<em>Slide-based tutorial / implementation guide</em>)</li>
+<li><a href="https://sahandsaba.com/understanding-sat-by-implementing-a-simple-sat-solver-in-python.html" target="_blank" rel="noopener noreferrer">Understanding SAT by Implementing a Simple SAT Solver in Python (Sahand Saba)</a></li>
+<li><a href="https://andrew.gibiansky.com/blog/verification/writing-a-sat-solver/" target="_blank" rel="noopener noreferrer">Writing a SAT Solver (Andrew Gibiansky)</a></li>
+<li><a href="https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html" target="_blank" rel="noopener noreferrer">Decision Procedures for Propositional Logic: DPLL and CDCL (Jeremy Avigad et al. / Logic and Mechanized Reasoning)</a></li>
 </ul>
-<h3 id="modal-logic">Modal Logic</h3>
+<h2 id="construct-your-own-smt-encodings">Construct your own SMT encodings</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=zvIlicepUBE">How to Build Models for Modal Logic (Kripke structures walkthrough)</a> (<em>Video tutorial / model construction</em>)</li>
+<li><a href="https://smt.st/" target="_blank" rel="noopener noreferrer">SAT/SMT by Example (Dennis Yurichev)</a></li>
+<li><a href="https://avigad.github.io/lamr/using_smt_solvers.html" target="_blank" rel="noopener noreferrer">Using SMT Solvers for Verification and Problem Solving (Jeremy Avigad et al. / Logic and Mechanized Reasoning)</a></li>
+<li><a href="https://ericpony.github.io/z3py-tutorial/guide-examples.htm" target="_blank" rel="noopener noreferrer">Strategies for SMT Solving in Z3: Python Tutorial (Z3 Community)</a></li>
 </ul>
-<h3 id="proof-system">Proof System</h3>
+<h2 id="formalize-your-own-mathematical-proofs">Formalize your own mathematical proofs</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://jens-otten.de/tutorial_tableaux19/">How to Build an Automated Theorem Prover (TABLEAUX tutorial series, covering calculi)</a> (<em>Slide-based tutorial / implementation guide</em>)</li>
+<li><a href="https://adam.math.hhu.de/" target="_blank" rel="noopener noreferrer">The Natural Number Game (Kevin Buzzard &amp; Mohammad Pedramfar)</a></li>
+<li><a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank" rel="noopener noreferrer">Mathematics in Lean (Jeremy Avigad &amp; Patrick Massot)</a></li>
+<li><a href="https://softwarefoundations.cis.upenn.edu/lf-current/index.html" target="_blank" rel="noopener noreferrer">Logical Foundations: Software Foundations Volume 1 (Benjamin C. Pierce et al. / University of Pennsylvania)</a></li>
 </ul>
-<h3 id="natural-deduction-system">Natural Deduction System</h3>
+<h2 id="build-your-own-model-checkers">Build your own model checkers</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=mNkWi8uIIhk">How to do Natural Deduction Proofs (step-by-step rule application)</a> (<em>Video tutorial / proof construction</em>)</li>
+<li><a href="https://www.researchgate.net/publication/261320291_Build_your_own_model_checker_in_one_month" target="_blank" rel="noopener noreferrer">Build Your Own Model Checker in One Month (Jin Song Dong, Jun Sun, &amp; Yang Liu / ICSE 2013)</a></li>
 </ul>
-<h3 id="sequent-calculus">Sequent Calculus</h3>
+<h2 id="write-your-own-formal-specifications">Write your own formal specifications</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://pauldownen.com/publications/sequent-intro.pdf">A Tutorial on Computational Classical Logic and the Sequent Calculus (introduction to rules and structure)</a> (<em>PDF tutorial / conceptual build</em>)</li>
+<li><a href="https://learntla.com/" target="_blank" rel="noopener noreferrer">Learn TLA+: Practical Formal Specification (Hillel Wayne)</a></li>
+<li><a href="https://lamport.azurewebsites.net/video/videos.html" target="_blank" rel="noopener noreferrer">The TLA+ Video Course: Modeling and Checking State Machines (Leslie Lamport)</a></li>
 </ul>
-<h3 id="tableau-system">Tableau System</h3>
+<h2 id="diagram-your-own-argument-maps">Diagram your own argument maps</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://jens-otten.de/tutorial_tableaux19/">How to Build an Automated Theorem Prover (includes tableau parts in sequent/tableau tutorial)</a> (<em>Slide-based tutorial / implementation guide</em>)</li>
+<li><a href="https://philosophy.lander.edu/logic/diagram.html" target="_blank" rel="noopener noreferrer">Diagramming Arguments (Lander University Philosophy Department)</a></li>
+<li><a href="https://philmaps.com/hints" target="_blank" rel="noopener noreferrer">PhilMaps: Handy Hints for Argument Visualization (Simon Cullen / Princeton University)</a></li>
+<li><a href="https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html" target="_blank" rel="noopener noreferrer">The Toulmin Argument Model (Purdue Online Writing Lab)</a></li>
 </ul>
-<h3 id="hilbert-style-axiomatic-system">Hilbert-style Axiomatic System</h3>
-<p>(No strong from-scratch procedural guides found; axiomatic systems are often presented descriptively.)</p>
-<h3 id="automated-theorem-prover">Automated Theorem Prover</h3>
+<h2 id="write-your-own-logic-programs">Write your own logic programs</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=J3Pm43O48Uo">How (and why) to Build an Automated Theorem Prover (Java implementation walkthrough)</a> (<em>Video series / implementation</em>)</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://jens-otten.de/tutorial_cade19/">Build Your Own First-Order Prover (Prolog-based, hands-on)</a> (<em>Slide-based tutorial / code-focused</em>)</li>
+<li><a href="https://potassco.org/" target="_blank" rel="noopener noreferrer">Potassco: Answer Set Solving in Practice (University of Potsdam)</a></li>
+<li><a href="https://www.metalevel.at/prolog" target="_blank" rel="noopener noreferrer">The Power of Prolog (Markus Triska)</a></li>
 </ul>
-<h3 id="proof-assistant-kernel">Proof Assistant Kernel</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://avigad.github.io/lamr/implementing_first_order_logic.html">Implementing First-Order Logic in Lean (kernel-like syntax/semantics base, extendable)</a> (<em>Online book chapter / code tutorial</em>)</li>
-</ul>
-<h3 id="logical-semantics">Logical Semantics</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://avigad.github.io/lamr/implementing_first_order_logic.html">Implementing First-Order Logic in Lean (model semantics and evaluation)</a> (<em>Online book chapter / code tutorial</em>)</li>
-</ul>
-<h3 id="model-checker">Model Checker</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.researchgate.net/publication/261320291_Build_your_own_model_checker_in_one_month">Build your own model checker in one month (tutorial overview, techniques survey)</a> (<em>Tutorial paper / construction guide</em>)</li>
-</ul>
-<h3 id="logical-inference-engine">Logical Inference Engine</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=J3Pm43O48Uo">How to Build an Automated Theorem Prover (inference-focused implementation)</a> (<em>Video series / implementation</em>)</li>
-</ul>
-<h3 id="argument">Argument</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://philosophy.lander.edu/logic/diagram.html">Diagramming Arguments (premise/conclusion structure, construction guide)</a> (<em>Online guide / argument building</em>)</li>
-</ul>
-<h3 id="formal-proof">Formal Proof</h3>
-<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=UY42egqAWo8">Natural Deduction Proofs: practise examples (step-by-step proof writing)</a> (<em>Video tutorial / proof construction</em>)</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=mNkWi8uIIhk">How to do Natural Deduction Proofs (rule-based formal proof building)</a> (<em>Video tutorial / proof construction</em>)</li>
-</ul>
-</article>
-</main>
+    </article>
+  </main>
 
 </body>
 </html>
